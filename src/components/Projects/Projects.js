@@ -23,12 +23,23 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={suicide}
+              isBlog={false}
+              title="BaguetteBudget (in progress)"
+              description="A virtual assistant that helps me manage and analyze my finances. Integrating with Model Context Protocol as well as AI Agent to automate the process, helping me keep track of my expenses, produce monthly report to better manage my finances."
+              ghLink="https://github.com/tmdeptrai/BaguetteBudget"
+              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Legal Contract Analyzer"
+              description="MLOps project of an AI-powered RAG Chatbot for understanding and querying legal documents. Together with CI/CD, monitoring and visualization. Using state-of-the-art Qwen3 for LLM and embeddings."
+              ghLink="https://github.com/tmdeptrai/LegalContractAnalyzer"
+              demoLink="https://www.youtube.com/watch?v=kvJwAMWmvj0"
             />
           </Col>
 
@@ -36,10 +47,22 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              title="Fire Detection System"
+              description="This project implements a real-time fire detection system using computer vision and deep learning techniques. The system captures video from a webcam, processes the frames to detect fire using a YOLOv8 model, and displays the results in real-time. When a fire has been detected continuously for 12 frames, the system sends an alert via Telegram to notify users of the potential fire hazard."
               ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
               demoLink="https://blogs.soumya-jit.tech/"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={leaf}
+              isBlog={false}
+              title="Fire Context-Aware Dataset"
+              description="A dataset created for surveying and training Visual Language Models (VLM) to understand fire and its contextual environment. The dataset categorizes images into three classes: no fire, dangerous fire, and controlled fire."
+              ghLink="https://github.com/tmdeptrai/fire-context-aware-dataset"
+              // demoLink="https://plant49-ai.herokuapp.com/"
             />
           </Col>
 
@@ -47,32 +70,10 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="LeNet-5_CNN"
+              description="A deep learning project implementing the LeNet-5 CNN architecture for classifying images from the CIFAR-10 dataset, with hyperparameter optimization and real-time deployment."
+              ghLink="https://github.com/tmdeptrai/LeNet-5_CNN"
+              // demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
 

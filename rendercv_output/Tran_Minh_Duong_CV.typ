@@ -451,8 +451,10 @@
 
 // Print connections:
 #let connections-list = (
+  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi, Vietnam],
   [#box(original-link("mailto:minhduongqo@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)minhduongqo\@gmail.com])],
   [#box(original-link("tel:+84-961-264-447")[#fa-icon("phone", size: 0.9em) #h(0.05cm)0961 264 447])],
+  [#box(original-link("https://tmdeptrai.vercel.app/")[#fa-icon("link", size: 0.9em) #h(0.05cm)tmdeptrai.vercel.app])],
   [#box(original-link("https://linkedin.com/in/tran-minh-duong")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)tran-minh-duong])],
   [#box(original-link("https://github.com/tmdeptrai")[#fa-icon("github", size: 0.9em) #h(0.05cm)tmdeptrai])],
 )

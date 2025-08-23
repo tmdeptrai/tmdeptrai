@@ -46,8 +46,8 @@ function Home() {
       </Container>
       <Home2 />
       <About/>
-      <Projects />
       <Resume />
+      <Projects />
     </section>
 
   );

@@ -1,5 +1,6 @@
 cv:
   name: Tran Minh Duong
+  photo: profile_picture.jpg
   location: Hanoi, Vietnam
   email: minhduongqo@gmail.com
   phone: +84-961-264-447
@@ -11,9 +12,8 @@ cv:
       username: tmdeptrai
   sections:
     about_me:
-      - Undergraduate student at La Rochelle University, passionate about full-stack data science, computer vision, and natural language processing.
-      - Looking for AI Engineering jobs, specialized in developing RAG Chatbot, MLOps, LLMOps, Model-As-a-Service.
-
+      - I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG (Retrieval-Augmented Generation) chatbot and document-based retrieval pipelines.
+      - Looking for AI Engineering / MLOps roles where I can ship and improve model delivery.
     education:
       - institution: La Rochelle University
         area: Computer Science
@@ -24,14 +24,14 @@ cv:
         location: La Rochelle, France
         summary:
         highlights:
-          - 'Working on AI Agents project, RAG technology'
+          - 'Student in exchange program'
 
       - institution: University of Science and Technology of Hanoi
         area: Information and Communication Technology (Double Degree)
         degree: BSc
         date:
         start_date: 2023-09
-        end_date: present
+        end_date: 2025-07
         location: Hanoi, Vietnam
         summary:
         highlights:
@@ -45,12 +45,12 @@ cv:
         start_date: 2025-03
         end_date: 2025-07
         location: Hanoi, Vietnam
-        summary:
+        summary: Contributed to research on **context-aware fire detection** using Visual Language Models
         highlights:
-          - Collected and built a [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to survey different models
-          - Carried out experimentations on Visual Language Models such as Qwen2.5VL, InternVL3, Gemma3, .. and record metrics
-          - Finetuned Qwen2.5VL and InternVL3 via PEFT and LoRA injection
-      
+          - Published the [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to benchmark multimodal VLMs
+          - Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency
+          - Fine-tuned VLMs using **PEFT/LoRA** to boost model accuracy up to 85% - 90%
+
     projects:
       - name: '[Legal Contract Analyzer](https://github.com/tmdeptrai/LegalContractAnalyzer)'
         date:
@@ -61,27 +61,28 @@ cv:
         highlights:
           - Complete MLOps project with CI/CD and Monitoring
           - Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections
-          - "**Techstack**: Github Actions, FastAPI, vLLM, Supabase, ChromaDB, Docker, Prometheus/Grafana"
+          - "**Techstack**: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana"
       
       - name: '[Fire Detection System](https://github.com/tmdeptrai/FireDetectionSystem)'
         date:
         start_date: 2025-03
         end_date: 2025-04
         location:
-        summary: IoT-based real-time fire detection and alerting system with camera input
+        summary: IoT-based real-time fire detection and alerting system
         highlights:
-          - "YOLOv8 model trained on 1k+ annotated flame/smoke images (0.85 mAP0.5 and 0.95 Precision)"
-          - "Real-time alerts via Telegram API"
+          - "YOLOv8 trained on 1k+ annotated flame/smoke images (0.85 mAP0.5 and Precision = 0.95)"
+          - "Integrated Dockerized inference with Telegram alerts for live notifications"
           - "**Techstack**: Roboflow, Ultralytics YOLOv8, Docker, OpenCV"
 
-
     skills:
-      - label: Programming
-        details: Python, Java, C++, Matlab, good understanding of Web Development and DevOps
-      - label: Tools & Frameworks
-        details: PyTorch, Git, Docker, FastAPI, Github Actions, LaTeX
+      - label: Programming Languages
+        details: Python (proficient), Java, C++, Matlab, Bash
+      - label: ML / DL
+        details: PyTorch, Hugging Face transformers, scikit-learn
+      - label: Tools / MLOps
+        details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana
       - label: Languages
-        details: English (C1, IELTS 7.5), French (B2, DELF B2)
+        details: English C1 (IELTS 7.5), French B2 (DELF B2)
 
     # publications:
     #   - title: 3D Finite Element Analysis of No-Insulation Coils
@@ -144,7 +145,7 @@ design:
     name_font_family: Source Sans 3
     name_font_size: 30pt
     name_bold: true
-    photo_width: 3.5cm
+    photo_width: 3cm
     vertical_space_between_name_and_connections: 0.7cm
     vertical_space_between_connections_and_first_section: 0.7cm
     horizontal_space_between_connections: 0.5cm

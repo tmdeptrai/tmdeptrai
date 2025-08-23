@@ -27,7 +27,7 @@
 #let design-text-font-family = "Source Sans 3"
 #let design-text-alignment = "justified"
 #let design-text-date-and-location-column-alignment = right
-#let design-header-photo-width = 3.5cm
+#let design-header-photo-width = 3cm
 #let design-header-use-icons-for-connections = true
 #let design-header-name-font-family = "Source Sans 3"
 #let design-header-name-font-size = 30pt
@@ -313,7 +313,7 @@
     let ending-index = starting-index + 1
     while (
       measure(connections-list.slice(starting-index, ending-index).join(separator)).width
-        < page.width - left-sum-right-margin
+        < page.width - left-sum-right-margin - design-header-photo-width * 1.1
     ) {
       ending-index = ending-index + 1
       if ending-index > connections-list.len() {
@@ -447,6 +447,17 @@
   )
 ]
 
+#two-col(
+  left-column-width: design-header-photo-width * 1.1,
+  right-column-width: 1fr,
+  left-content: [
+    #align(
+      left + horizon,
+      image("profile_picture.jpg", width: design-header-photo-width),
+    )
+  ],
+  column-gutter: 0cm,
+  right-content: [
 = Tran Minh Duong
 
 // Print connections:
@@ -460,17 +471,19 @@
 )
 #connections(connections-list)
 
+  ],
+)
 
 
 == About Me
 
 
 #one-col-entry(
-  content: [Undergraduate student at La Rochelle University, passionate about full-stack data science, computer vision, and natural language processing.]
+  content: [I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG \(Retrieval-Augmented Generation\) chatbot and document-based retrieval pipelines.]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [Looking for AI Engineering jobs, specialized in developing RAG Chatbot, MLOps, LLMOps, Model-As-a-Service.]
+  content: [Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.]
 )
 
 
@@ -485,7 +498,7 @@
     #strong[La Rochelle University], Computer Science
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Working on AI Agents project, RAG technology],)
+    #v(design-highlights-top-margin);#highlights([Student in exchange program],)
   ],
   right-content: [
     La Rochelle, France
@@ -508,7 +521,7 @@ Sept 2025 – present
   right-content: [
     Hanoi, Vietnam
 
-Sept 2023 – present
+Sept 2023 – July 2025
   ],
 )
 
@@ -522,7 +535,9 @@ Sept 2023 – present
     #strong[ICTLab - USTH], Research Assistant
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Collected and built a #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to survey different models],[Carried out experimentations on Visual Language Models such as Qwen2.5VL, InternVL3, Gemma3, .. and record metrics],[Finetuned Qwen2.5VL and InternVL3 via PEFT and LoRA injection],)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
+
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -548,7 +563,7 @@ Mar 2025 – July 2025
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Complete MLOps project with CI\/CD and Monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, Supabase, ChromaDB, Docker, Prometheus\/Grafana],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Complete MLOps project with CI\/CD and Monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
   ],
 )
 
@@ -563,9 +578,9 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [IoT-based real-time fire detection and alerting system with camera input])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [IoT-based real-time fire detection and alerting system])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 model trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and 0.95 Precision\)],[Real-time alerts via Telegram API],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and Precision = 0.95\)],[Integrated Dockerized inference with Telegram alerts for live notifications],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
   ],
 )
 
@@ -575,15 +590,19 @@ Mar 2025 – July 2025
 
 
 #one-col-entry(
-  content: [#strong[Programming:] Python, Java, C++, Matlab, good understanding of Web Development and DevOps]
+  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Tools & Frameworks:] PyTorch, Git, Docker, FastAPI, Github Actions, LaTeX]
+  content: [#strong[ML \/ DL:] PyTorch, Hugging Face transformers, scikit-learn]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Languages:] English \(C1, IELTS 7.5\), French \(B2, DELF B2\)]
+  content: [#strong[Tools \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
+)
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(
+  content: [#strong[Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
 )
 
 

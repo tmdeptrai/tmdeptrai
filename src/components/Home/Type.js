@@ -8,11 +8,10 @@ function Type() {
         strings: [
           "AI Software Engineer",
           "Computer Science Undergraduate",
-          "LLM Specialist"
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        deleteSpeed: 100,
       }}
     />
   );

@@ -5,7 +5,7 @@
 
 No I cannot fix your printer, i'm a programmer, not a technician :((
 
-## 🚀 About Me
+## About Me
 
 - **Location:** Hanoi, Vietnam
 - **Passion:** Crafting cool solutions, building machine learning models, and exploring new tech challenges.

@@ -1,9 +1,14 @@
-![Profile Views](https://komarev.com/ghpvc/?username=GalaxyAnnihilator&style=flat-square)
-![GitHub followers](https://img.shields.io/github/followers/GalaxyAnnihilator?style=social)
+<div style="text-align: center">
+  <a href="https://tmdeptrai.vercel.app">
+  <img alt="Demo" width=100% src="./src/Assets/Projects/banner_portfolio.png" />
+  </a>
+</div>
 
-## Hi, I am Tran Minh Duong or tmd for short !
+![Profile Views](https://komarev.com/ghpvc/?username=tmdeptrai&style=flat-square)
+![GitHub followers](https://img.shields.io/github/followers/tmdeptrai?style=social)
 
-No I cannot fix your printer, i'm a programmer, not a technician :((
+
+# Hi, I am Tran Minh Duong or *tmd* for short !
 
 ## About Me
 
@@ -15,10 +20,10 @@ No I cannot fix your printer, i'm a programmer, not a technician :((
 
 Here are a few projects I’m proud of:
 
-- **[elemat](https://github.com/GalaxyAnnihilator/elemat)**: A project that demonstrates my knack for web and app development.
-- **[FireDetectionSystem](https://github.com/GalaxyAnnihilator/FireDetectionSystem)**: Using technology to help keep communities safe.
-- **[LeNet-5_CNN](https://github.com/GalaxyAnnihilator/LeNet-5_CNN)**: My venture into deep learning and computer vision.
-- **[MachineLearning](https://github.com/GalaxyAnnihilator/MachineLearning)**: Experimenting with algorithms and data science techniques.
+- **[elemat](https://github.com/tmdeptrai/elemat)**: A project that demonstrates my knack for web and app development.
+- **[FireDetectionSystem](https://github.com/tmdeptrai/FireDetectionSystem)**: Using technology to help keep communities safe.
+- **[LeNet-5_CNN](https://github.com/tmdeptrai/LeNet-5_CNN)**: My venture into deep learning and computer vision.
+- **[MachineLearning](https://github.com/tmdeptrai/MachineLearning)**: Experimenting with algorithms and data science techniques.
 
 ## 🎯 What I’m Working On
 
@@ -28,8 +33,8 @@ Here are a few projects I’m proud of:
 
 ## 📫 How to Reach Me
 
-- **GitHub:** [GalaxyAnnihilator](https://github.com/GalaxyAnnihilator)
-- **Facebook:** [duong.tranminhahaha](https://www.facebook.com/duong.tranminhahaha)
+- **GitHub:** [tmdeptrai](https://github.com/tmdeptrai)
+- **Facebook:** [duong.tranminhahaha](https://www.facebook.com/tran.minhduongovtk)
 - **Email:** duongtm.23bi14126@usth.edu.vn or minhduongqo@gmail.com
 
 ## 🤝 Let’s Collaborate!

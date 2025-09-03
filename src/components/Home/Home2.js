@@ -10,6 +10,7 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import ProfileCard from "../ProfileCard/ProfileCard.jsx"
 
 function Home2() {
   return (
@@ -54,9 +55,22 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+              <ProfileCard
+                  name="Tran Minh Duong"
+                  title="AI Engineer"
+                  handle="tmdeptrai"
+                  status="Online"
+                  contactText="Contact Me"
+                  // avatarUrl="../../Assets/avt6.png"
+                  showUserInfo={false}
+                  enableTilt={true}
+                  enableMobileTilt={true}
+                  onContactClick={() => console.log('Contact clicked')}
+                  // iconUrl = "../../Assets/iconpattern.png"
+                  // grainUrl = "../../Assets/grain.webp"
+                  // showBehindGradient = {true}
+                  // miniAvatarUrl
+              />
           </Col>
         </Row>
         <Row>

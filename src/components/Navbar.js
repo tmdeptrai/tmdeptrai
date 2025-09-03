@@ -87,6 +87,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as="a"
+                href="#resume"
+                onClick={() => handleScrollTo("resume")}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+            
+            <Nav.Item>
+              <Nav.Link
+                as="a"
                 href="#projects"
                 onClick={() => handleScrollTo("projects")}
               >
@@ -97,15 +107,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                as="a"
-                href="#resume"
-                onClick={() => handleScrollTo("resume")}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button

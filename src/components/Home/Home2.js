@@ -10,7 +10,8 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import ProfileCard from "../ProfileCard/ProfileCard.jsx"
+import ProfileCard from "../ProfileCard/ProfileCard.jsx";
+import ScrollFloat from "../ScrollFloat/ScrollFloat.jsx";
 
 function Home2() {
   return (
@@ -18,11 +19,21 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
+              {/* <h1 style={{ fontSize: "2.6em" }}>
+                LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              </h1> */}
+            <ScrollFloat
+              animationDuration={2}
+              ease="back.inOut(2)"
+              scrollStart="center bottom+=50%"
+              scrollEnd="bottom bottom-=70%"
+              stagger={0.03}
+            >
+                LET ME INTRODUCE MYSELF
+            </ScrollFloat>
             <p className="home-about-body">
-              Programming is fun, it grants me the power to shape the world by creating my own tech solutions.
+              Programming is fun, it grants me the power to shape the world by
+              creating my own tech solutions.
               <br />
               <br />I am fluent in
               <i>
@@ -32,11 +43,8 @@ function Home2() {
               <br />
               My field of interest's are building&nbsp;
               <i>
-                <b className="purple">AI-powered chatbot</b> and
-                also in{" "}
-                <b className="purple">
-                  MLOps, LLMOps.
-                </b>
+                <b className="purple">AI-powered chatbot</b>, training deep learning models, <b className="purple">fine-tuning LLMs</b>, and also <b className="purple">designing systems</b> that follows principles of{" "}
+                <b className="purple">MLOps, LLMOps.</b>
               </i>
               <br />
               <br />
@@ -55,22 +63,22 @@ function Home2() {
             </p>
           </Col>
           <Col md={4} className="myAvtar">
-              <ProfileCard
-                  name="Tran Minh Duong"
-                  title="AI Engineer"
-                  handle="tmdeptrai"
-                  status="Online"
-                  contactText="Contact Me"
-                  // avatarUrl="../../Assets/avt6.png"
-                  showUserInfo={false}
-                  enableTilt={true}
-                  enableMobileTilt={true}
-                  onContactClick={() => console.log('Contact clicked')}
-                  // iconUrl = "../../Assets/iconpattern.png"
-                  // grainUrl = "../../Assets/grain.webp"
-                  // showBehindGradient = {true}
-                  // miniAvatarUrl
-              />
+            <ProfileCard
+              name="Tran Minh Duong"
+              title="AI Engineer"
+              handle="tmdeptrai"
+              status="Online"
+              contactText="Contact Me"
+              // avatarUrl="../../Assets/avt6.png"
+              showUserInfo={false}
+              enableTilt={true}
+              enableMobileTilt={true}
+              onContactClick={() => console.log("Contact clicked")}
+              // iconUrl = "../../Assets/iconpattern.png"
+              // grainUrl = "../../Assets/grain.webp"
+              // showBehindGradient = {true}
+              // miniAvatarUrl
+            />
           </Col>
         </Row>
         <Row>

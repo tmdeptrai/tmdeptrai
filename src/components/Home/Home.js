@@ -4,9 +4,6 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import About from "../../components/About/About.js";
-import Projects from "../../components/Projects/Projects";
-import Resume from "../../components/Resume/ResumeNew";
 
 function Home() {
   return (
@@ -26,6 +23,7 @@ function Home() {
               <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> TRAN MINH DUONG</strong>
+
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -46,7 +44,6 @@ function Home() {
       </Container>
       <Home2 />
     </section>
-
   );
 }
 

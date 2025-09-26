@@ -1,0 +1,256 @@
+cv:
+  name: Tran Minh Duong
+  photo: profile_picture.jpg
+  location: Hanoi, Vietnam
+  email: minhduongqo@gmail.com
+  phone: +84-961-264-447
+  website: https://tmdeptrai.vercel.app/
+  social_networks:
+    - network: LinkedIn
+      username: tran-minh-duong
+    - network: GitHub
+      username: tmdeptrai
+  sections:
+    about_me:
+      - Je conçois et déploie des systèmes de ML prêts pour la production, en mettant l'accent sur la fiabilité et l'évolutivité. J'ai de l'expérience dans la conception et l'exploitation de chatbots et de pipelines de recherche documentaire basés sur le RAG (Retrieval-Augmented Generation).
+      - Je recherche un poste en AI Engineering / MLOps où je pourrai livrer et améliorer la mise en production de modèles.
+    education:
+      - institution: Université de La Rochelle
+        area: Informatique
+        degree: BSc
+        date:
+        start_date: 2025-09
+        end_date: present
+        location: La Rochelle, France
+        summary:
+        highlights:
+          - "Étudiant en programme d'échange"
+
+      - institution: Université des Sciences et Technologies de Hanoï
+        area: Technologies de l'Information et de la Communication (Double Diplôme)
+        degree: BSc
+        date:
+        start_date: 2023-09
+        end_date: 2025-07
+        location: Hanoï, Vietnam
+        summary:
+        highlights:
+          - Classé 1er parmi les étudiants en Double Diplôme
+          - "Moyenne générale : 18,46/20 en L1 ; 18,50/20 en L2"
+
+    experience:
+      - company: ICTLab - USTH
+        position: Assistant de recherche
+        date:
+        start_date: 2025-03
+        end_date: 2025-07
+        location: Hanoï, Vietnam
+        summary: Contribution à la recherche sur la **détection d'incendies contextuelle** à l'aide de modèles Vision-Langage
+        highlights:
+          - Publication du [jeu de données fire context awareness](https://github.com/tmdeptrai/fire-context-aware-dataset) pour l'évaluation des VLM multimodaux
+          - Évaluation de Qwen2.5VL, InternVL3 et Gemma3 en mettant en place des pipelines comparant précision, rappel, F1-score et latence d'inférence
+          - Fine-tuning de VLMs avec **PEFT/LoRA** pour améliorer la précision jusqu'à 85 % - 90 %
+
+    projects:
+      - name: '[Analyseur de Contrats Juridiques](https://github.com/tmdeptrai/LegalContractAnalyzer)'
+        date:
+        start_date: 2025-07
+        end_date: 2025-08
+        location:
+        summary: Chatbot RAG pour comprendre et extraire les informations clés des documents juridiques
+        highlights:
+          - Projet MLOps complet avec CI/CD et monitoring
+          - Utilise RAG avec recherche sémantique, embeddings + LLMs pour extraire les sections pertinentes
+          - "**Stack technique** : Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana"
+      
+      - name: "[Système de Détection d'Incendie](https://github.com/tmdeptrai/FireDetectionSystem)"
+        date:
+        start_date: 2025-03
+        end_date: 2025-04
+        location:
+        summary: Système IoT de détection et d'alerte d'incendie en temps réel
+        highlights:
+          - "YOLOv8 entraîné sur plus de 1000 images annotées de flammes/fumée (mAP0.5 = 0,85 et Précision = 0,95)"
+          - "Intégration d'une inférence Dockerisée avec alertes Telegram en temps réel"
+          - "**Stack technique** : Roboflow, Ultralytics YOLOv8, Docker, OpenCV"
+
+    skills:
+      - label: Langages de programmation
+        details: Python (confirmé), Java, C++, Matlab, Bash
+      - label: ML / DL
+        details: PyTorch, Hugging Face transformers, scikit-learn
+      - label: Outils / MLOps
+        details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana
+      - label: Langues
+        details: Anglais C1 (IELTS 7.5), Français B2 (DELF B2)
+
+    awards:
+      - label: Bourse d'Excellence USTH
+        details: Couverture totale des frais de scolarité
+        date: 2025
+      - label: Certificat d'Honneur de l'Union de la Jeunesse (VAST)
+        details: Reconnaissance pour contributions à la communauté académique
+        date: 2024
+      - label: Certificat d'Honneur (USTH Learning Support Club)
+        details: Pour contributions en enseignement et mentorat
+        date: 2024
+      - label: Certifications MOOC
+        details: "Deep Learning en Python : Classification d'images basée sur CNN"
+        date: 2024
+
+    extracurricular_activities:
+      - bullet: Club d'Intelligence Artificielle de l'USTH - Spécialiste en Vision par Ordinateur
+      - bullet: USTH Learning Support Club - Mentor en Maths & Informatique, a enseigné à plus de 300 étudiants en Machine Learning, Calcul, Algèbre Linéaire
+      - bullet: Fondateur de **PioTech Club**, une communauté STEM active au Lycée de Quoc Oai.
+
+design:
+  theme: classic
+  page:
+    size: us-letter
+    top_margin: 2cm
+    bottom_margin: 2cm
+    left_margin: 2cm
+    right_margin: 2cm
+    show_page_numbering: true
+    show_last_updated_date: true
+  colors:
+    text: rgb(0, 0, 0)
+    name: rgb(0, 79, 144)
+    connections: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+    last_updated_date_and_page_numbering: rgb(128, 128, 128)
+  text:
+    font_family: Source Sans 3
+    font_size: 10pt
+    leading: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+  links:
+    underline: false
+    use_external_link_icon: true
+  header:
+    name_font_family: Source Sans 3
+    name_font_size: 30pt
+    name_bold: true
+    photo_width: 3cm
+    vertical_space_between_name_and_connections: 0.7cm
+    vertical_space_between_connections_and_first_section: 0.7cm
+    horizontal_space_between_connections: 0.5cm
+    connections_font_family: Source Sans 3
+    separator_between_connections: ''
+    use_icons_for_connections: true
+    alignment: center
+  section_titles:
+    type: with-parial-line
+    font_family: Source Sans 3
+    font_size: 1.4em
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.5cm
+    vertical_space_below: 0.3cm
+  entries:
+    date_and_location_width: 4.15cm
+    left_and_right_margin: 0.2cm
+    horizontal_space_between_columns: 0.1cm
+    vertical_space_between_entries: 1.2em
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+    short_second_row: false
+    show_time_spans_in: []
+  highlights:
+    bullet: •
+    top_margin: 0.25cm
+    left_margin: 0.4cm
+    vertical_space_between_highlights: 0.25cm
+    horizontal_space_between_bullet_and_highlight: 0.5em
+    summary_left_margin: 0cm
+  entry_types:
+    one_line_entry:
+      template: '**LABEL:** DETAILS'
+    education_entry:
+      main_column_first_row_template: '**INSTITUTION**, AREA'
+      degree_column_template: '**DEGREE**'
+      degree_column_width: 1cm
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    normal_entry:
+      main_column_first_row_template: '**NAME**'
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    experience_entry:
+      main_column_first_row_template: '**COMPANY**, POSITION'
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: |-
+        LOCATION
+        DATE
+    publication_entry:
+      main_column_first_row_template: '**TITLE**'
+      main_column_second_row_template: |-
+        AUTHORS
+        URL (JOURNAL)
+      main_column_second_row_without_journal_template: |-
+        AUTHORS
+        URL
+      main_column_second_row_without_url_template: |-
+        AUTHORS
+        JOURNAL
+      date_and_location_column_template: DATE
+locale:
+  language: en
+  phone_number_format: national
+  page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_template: Last updated in TODAY
+  date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present
+  to:
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - June
+    - July
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+rendercv_settings:
+  bold_keywords:
+    - abc
+  render_command:
+    output_folder_name: rendercv_output
+    pdf_path: FRANCAIS_TRAN_MINH_DUONG_CV.pdf
+    dont_generate_html: true 
+    dont_generate_markdown: true 
+    dont_generate_png: true

@@ -1,5 +1,6 @@
 cv:
   name: Tran Minh Duong
+  subtitle: AI Engineer Intern
   photo: profile_picture.jpg
   location: Hanoi, Vietnam
   email: minhduongqo@gmail.com
@@ -78,7 +79,7 @@ cv:
       - label: Programming Languages
         details: Python (proficient), Java, C++, Matlab, Bash
       - label: ML / DL
-        details: PyTorch, Hugging Face transformers, scikit-learn
+        details: PyTorch, Hugging Face transformers, scikit-learn, numpy, matplotlib
       - label: Tools / MLOps
         details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana
       - label: Languages
@@ -96,24 +97,24 @@ cv:
     #     date: 2004-01
 
 
-    awards:
-      - label: USTH Excellence Scholarship
-        details: 100% tuition coverage
-        date: 2025
-      - label: Youth Union Certificate of Achievement (VAST)
-        details: Recognition for contributions to academic community
-        date: 2024
-      - label: Certificate of Achievement (USTH Learning Support Club)
-        details: For contributions in teaching and mentoring
-        date: 2024
-      - label: MOOC Certifications
-        details: "Deep Learning in Python: CNN-based Image Classification"
-        date: 2024
+    # awards:
+    #   - label: USTH Excellence Scholarship
+    #     details: 100% tuition coverage
+    #     date: 2025
+    #   - label: Youth Union Certificate of Achievement (VAST)
+    #     details: Recognition for contributions to academic community
+    #     date: 2024
+    #   - label: Certificate of Achievement (USTH Learning Support Club)
+    #     details: For contributions in teaching and mentoring
+    #     date: 2024
+    #   - label: MOOC Certifications
+    #     details: "Deep Learning in Python: CNN-based Image Classification"
+    #     date: 2024
 
-    extracurricular_activities:
-      - bullet: USTH Artificial Intelligence Club - Computer Vision Specialist
-      - bullet: USTH Learning Support Club - Math & CS Mentor, taught 300+ students in Machine Learning, Calculus, Linear Algebra
-      - bullet: Founded **PioTech Club**, an active STEM community in Quoc Oai High School.
+    # extracurricular_activities:
+    #   - bullet: USTH Artificial Intelligence Club - Computer Vision Specialist
+    #   - bullet: USTH Learning Support Club - Math & CS Mentor, taught 300+ students in Machine Learning, Calculus, Linear Algebra
+    #   - bullet: Founded **PioTech Club**, an active STEM community in Quoc Oai High School.
 
 design:
   theme: classic
@@ -143,7 +144,7 @@ design:
     use_external_link_icon: true
   header:
     name_font_family: Source Sans 3
-    name_font_size: 30pt
+    name_font_size: 35pt
     name_bold: true
     photo_width: 3cm
     vertical_space_between_name_and_connections: 0.7cm

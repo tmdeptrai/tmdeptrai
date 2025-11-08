@@ -1,4 +1,7 @@
 # <<cv.name>>'s CV
+((* if cv.subtitle *))
+- _<<cv.subtitle>>_
+((* endif *))
 
 ((* if cv.phone *))
 - Phone: <<cv.phone|replace("tel:", "")|replace("-"," ")>>

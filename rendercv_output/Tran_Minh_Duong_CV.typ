@@ -3,7 +3,7 @@
 
 #let name = "Tran Minh Duong"
 #let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Sept 2025"
+#let locale-catalog-last-updated-date-style = "Last updated in Nov 2025"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
 #let design-section-titles-font-size = 1.4em
@@ -30,8 +30,15 @@
 #let design-header-photo-width = 3cm
 #let design-header-use-icons-for-connections = true
 #let design-header-name-font-family = "Source Sans 3"
-#let design-header-name-font-size = 30pt
+#let design-header-name-font-size = 35pt
 #let design-header-name-bold = true
+#let design-header-subtitle-font-family = "Source Sans 3"
+// Subtitle size: compute from the header name size in Typst so users can tweak
+// the name size via `design.header.name_font_size` in YAML without adding
+// custom (unknown) YAML keys. This avoids Jinja-level arithmetic on unit
+// strings which would fail.
+#let design-header-subtitle-font-size = design-header-name-font-size * 0.45
+#let design-header-subtitle-font-weight = 700
 #let design-header-connections-font-family = "Source Sans 3"
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
@@ -458,7 +465,20 @@
   ],
   column-gutter: 0cm,
   right-content: [
-= Tran Minh Duong
+  #align(center,
+    [
+        = Tran Minh Duong
+        #set text(
+          font: design-header-subtitle-font-family,
+          size: design-header-subtitle-font-size,
+          weight: design-header-subtitle-font-weight,
+          fill: design-colors-name,
+        )
+        #v(0.1cm)
+        #smallcaps("AI Engineer Intern")
+        #v(design-header-vertical-space-between-name-and-connections - 0.25cm)
+    ]
+  )
 
 // Print connections:
 #let connections-list = (
@@ -479,11 +499,11 @@
 
 
 #one-col-entry(
-  content: [Je conçois et déploie des systèmes de ML prêts pour la production, en mettant l'accent sur la fiabilité et l'évolutivité. J'ai de l'expérience dans la conception et l'exploitation de chatbots et de pipelines de recherche documentaire basés sur le RAG \(Retrieval-Augmented Generation\).]
+  content: [I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG \(Retrieval-Augmented Generation\) chatbot and document-based retrieval pipelines.]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [Je recherche un poste en AI Engineering \/ MLOps où je pourrai livrer et améliorer la mise en production de modèles.]
+  content: [Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.]
 )
 
 
@@ -495,10 +515,10 @@
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[Université de La Rochelle], Informatique
+    #strong[La Rochelle University], Computer Science
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Étudiant en programme d'échange],)
+    #v(design-highlights-top-margin);#highlights([Student in exchange program],)
   ],
   right-content: [
     La Rochelle, France
@@ -513,13 +533,13 @@ Sept 2025 – present
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[Université des Sciences et Technologies de Hanoï], Technologies de l'Information et de la Communication \(Double Diplôme\)
+    #strong[University of Science and Technology of Hanoi], Information and Communication Technology \(Double Degree\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Classé 1er parmi les étudiants en Double Diplôme],[Moyenne générale : 18,46\/20 en L1 ; 18,50\/20 en L2],)
+    #v(design-highlights-top-margin);#highlights([Ranked 1st among Double Degree students],[GPA: 18.46\/20 in Year 1; 18.50\/20 in Year 2],)
   ],
   right-content: [
-    Hanoï, Vietnam
+    Hanoi, Vietnam
 
 Sept 2023 – July 2025
   ],
@@ -532,15 +552,15 @@ Sept 2023 – July 2025
 
 #two-col-entry(
   left-content: [
-    #strong[ICTLab - USTH], Assistant de recherche
+    #strong[ICTLab - USTH], Research Assistant
     #v(-design-text-leading)
 
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contribution à la recherche sur la #strong[détection d'incendies contextuelle] à l'aide de modèles Vision-Langage])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Publication du #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[jeu de données fire context awareness] pour l'évaluation des VLM multimodaux],[Évaluation de Qwen2.5VL, InternVL3 et Gemma3 en mettant en place des pipelines comparant précision, rappel, F1-score et latence d'inférence],[Fine-tuning de VLMs avec #strong[PEFT\/LoRA] pour améliorer la précision jusqu'à 85 \% - 90 \%],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
   ],
   right-content: [
-    Hanoï, Vietnam
+    Hanoi, Vietnam
 
 Mar 2025 – July 2025
   ],
@@ -553,7 +573,7 @@ Mar 2025 – July 2025
 
 #two-col-entry(
   left-content: [
-    #link("https://github.com/tmdeptrai/LegalContractAnalyzer")[#strong[Analyseur de Contrats Juridiques]]
+    #link("https://github.com/tmdeptrai/LegalContractAnalyzer")[#strong[Legal Contract Analyzer]]
   ],
   right-content: [
     July 2025 – Aug 2025
@@ -561,16 +581,16 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Chatbot RAG pour comprendre et extraire les informations clés des documents juridiques])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Projet MLOps complet avec CI\/CD et monitoring],[Utilise RAG avec recherche sémantique, embeddings + LLMs pour extraire les sections pertinentes],[#strong[Stack technique] : Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Complete MLOps project with CI\/CD and Monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
   ],
 )
 
 #v(design-entries-vertical-space-between-entries)
 #two-col-entry(
   left-content: [
-    #link("https://github.com/tmdeptrai/FireDetectionSystem")[#strong[Système de Détection d'Incendie]]
+    #link("https://github.com/tmdeptrai/FireDetectionSystem")[#strong[Fire Detection System]]
   ],
   right-content: [
     Mar 2025 – Apr 2025
@@ -578,9 +598,9 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Système IoT de détection et d'alerte d'incendie en temps réel])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [IoT-based real-time fire detection and alerting system])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 entraîné sur plus de 1000 images annotées de flammes\/fumée \(mAP0.5 = 0,85 et Précision = 0,95\)],[Intégration d'une inférence Dockerisée avec alertes Telegram en temps réel],[#strong[Stack technique] : Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and Precision = 0.95\)],[Integrated Dockerized inference with Telegram alerts for live notifications],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
   ],
 )
 
@@ -590,55 +610,19 @@ Mar 2025 – July 2025
 
 
 #one-col-entry(
-  content: [#strong[Langages de programmation:] Python \(confirmé\), Java, C++, Matlab, Bash]
+  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[ML \/ DL:] PyTorch, Hugging Face transformers, scikit-learn]
+  content: [#strong[ML \/ DL:] PyTorch, Hugging Face transformers, scikit-learn, numpy, matplotlib]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Outils \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
+  content: [#strong[Tools \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Langues:] Anglais C1 \(IELTS 7.5\), Français B2 \(DELF B2\)]
-)
-
-
-== Awards
-
-
-#one-col-entry(
-  content: [#strong[Bourse d'Excellence USTH:] Couverture totale des frais de scolarité]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Certificat d'Honneur de l'Union de la Jeunesse \(VAST\):] Reconnaissance pour contributions à la communauté académique]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Certificat d'Honneur \(USTH Learning Support Club\):] Pour contributions en enseignement et mentorat]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Certifications MOOC:] Deep Learning en Python : Classification d'images basée sur CNN]
-)
-
-
-== Extracurricular Activities
-
-
-#one-col-entry(
-  content: [- Club d'Intelligence Artificielle de l'USTH - Spécialiste en Vision par Ordinateur],
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- USTH Learning Support Club - Mentor en Maths & Informatique, a enseigné à plus de 300 étudiants en Machine Learning, Calcul, Algèbre Linéaire],
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [- Fondateur de #strong[PioTech Club], une communauté STEM active au Lycée de Quoc Oai.],
+  content: [#strong[Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
 )
 
 

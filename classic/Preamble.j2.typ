@@ -41,6 +41,13 @@
 #let design-header-name-font-family = "<<design.header.name_font_family>>"
 #let design-header-name-font-size = <<design.header.name_font_size>>
 #let design-header-name-bold = <<design.header.name_bold|lower>>
+#let design-header-subtitle-font-family = "<<design.header.subtitle_font_family|default(design.header.connections_font_family)>>"
+// Subtitle size: compute from the header name size in Typst so users can tweak
+// the name size via `design.header.name_font_size` in YAML without adding
+// custom (unknown) YAML keys. This avoids Jinja-level arithmetic on unit
+// strings which would fail.
+#let design-header-subtitle-font-size = design-header-name-font-size * 0.45
+#let design-header-subtitle-font-weight = <<design.header.subtitle_bold|default(false)|lower and 700 or 400>>
 #let design-header-connections-font-family = "<<design.header.connections_font_family>>"
 #let design-header-vertical-space-between-name-and-connections = <<design.header.vertical_space_between_name_and_connections>>
 #let design-header-vertical-space-between-connections-and-first-section = <<design.header.vertical_space_between_connections_and_first_section>>

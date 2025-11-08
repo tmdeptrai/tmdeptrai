@@ -11,8 +11,25 @@
   column-gutter: 0cm,
   right-content: [
 ((* endif *))
-((* if cv.name *))
-= <<cv.name|escape_typst_characters>>
+((* if cv.name or cv.subtitle *))
+  #align(center,
+    [
+      ((* if cv.name *))
+        = <<cv.name|escape_typst_characters>>
+      ((* endif *))
+      ((* if cv.subtitle *))
+        #set text(
+          font: design-header-subtitle-font-family,
+          size: design-header-subtitle-font-size,
+          weight: design-header-subtitle-font-weight,
+          fill: design-colors-name,
+        )
+        #v(0.1cm)
+        #smallcaps("<<cv.subtitle|escape_typst_characters>>")
+        #v(design-header-vertical-space-between-name-and-connections - 0.25cm)
+      ((* endif *))
+    ]
+  )
 ((* endif *))
 
 // Print connections:

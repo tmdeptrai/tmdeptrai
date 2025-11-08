@@ -5,14 +5,14 @@ import icon_url from "../../Assets/iconpattern.png"
 import grain_url from "../../Assets/grain.webp"
 
 // Space theme gradient color variables for easy tweaking
-const SPACE1 = 'hsla(260,80%,20%,var(--card-opacity))'; // deep purple
-const SPACE2 = 'hsla(240,70%,30%,calc(var(--card-opacity)*0.75))'; // dark blue
-const SPACE3 = 'hsla(220,60%,40%,calc(var(--card-opacity)*0.5))'; // blue
-const SPACE4 = 'hsla(260,60%,20%,0)'; // transparent purple
-const HEX_PURPLE1 = '#3a1c71'; // accent purple
-const HEX_BLUE1 = '#1a2980'; // accent blue
-const HEX_PURPLE2 = '#9d50bb'; // soft purple
-const HEX_TRANSPARENT = '#00000000';
+// const SPACE1 = 'hsla(260,80%,20%,var(--card-opacity))'; // deep purple
+// const SPACE2 = 'hsla(240,70%,30%,calc(var(--card-opacity)*0.75))'; // dark blue
+// const SPACE3 = 'hsla(220,60%,40%,calc(var(--card-opacity)*0.5))'; // blue
+// const SPACE4 = 'hsla(260,60%,20%,0)'; // transparent purple
+// const HEX_PURPLE1 = '#3a1c71'; // accent purple
+// const HEX_BLUE1 = '#1a2980'; // accent blue
+// const HEX_PURPLE2 = '#9d50bb'; // soft purple
+// const HEX_TRANSPARENT = '#00000000';
 const DEFAULT_BEHIND_GRADIENT =
   `radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(233,100%,90%,var(--card-opacity)) 4%,hsla(233,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(233,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(233,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,hsl(354, 100%, 70%) 0%,transparent 100%),radial-gradient(100% 100% at 50% 50%,hsl(296, 100%, 65%) 1%,transparent 76%),conic-gradient(from 124deg at 50% 50%,hsl(233, 100%, 70%) 0%,hsl(354, 100%, 70%) 40%,hsl(354, 100%, 70%) 60%,hsl(233, 100%, 70%) 100%)`;
 

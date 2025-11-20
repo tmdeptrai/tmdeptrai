@@ -475,14 +475,14 @@
           fill: design-colors-name,
         )
         #v(0.1cm)
-        #smallcaps("AI Engineer Intern")
+        #smallcaps("Stagiaire Ingénieur IA")
         #v(design-header-vertical-space-between-name-and-connections - 0.25cm)
     ]
   )
 
 // Print connections:
 #let connections-list = (
-  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi, Vietnam],
+  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoï, Vietnam],
   [#box(original-link("mailto:tmd.banminhchotuban@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)tmd.banminhchotuban\@gmail.com])],
   [#box(original-link("tel:+84-961-264-447")[#fa-icon("phone", size: 0.9em) #h(0.05cm)0961 264 447])],
   [#box(original-link("https://tmdeptrai.vercel.app/")[#fa-icon("link", size: 0.9em) #h(0.05cm)tmdeptrai.vercel.app])],
@@ -499,11 +499,11 @@
 
 
 #one-col-entry(
-  content: [I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG \(Retrieval-Augmented Generation\) chatbot and document-based retrieval pipelines.]
+  content: [Je conçois et déploie des systèmes de Machine Learning prêts pour la production, en mettant l'accent sur la fiabilité et la scalabilité. J'ai de l'expérience dans la conception et l'opération de pipelines RAG \(Génération Augmentée par la Récupération\) pour chatbots et recherche documentaire.]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.]
+  content: [À la recherche de postes d'Ingénieur IA \/ MLOps où je peux déployer et améliorer la livraison de modèles.]
 )
 
 
@@ -515,10 +515,10 @@
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[La Rochelle University], Computer Science
+    #strong[La Rochelle Université], Informatique
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Student in exchange program],)
+    #v(design-highlights-top-margin);#highlights([Étudiant en programme d'échange],)
   ],
   right-content: [
     La Rochelle, France
@@ -533,13 +533,13 @@ Sept 2025 – present
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[University of Science and Technology of Hanoi], Information and Communication Technology \(Double Degree\)
+    #strong[University of Science and Technology of Hanoi \(USTH\)], Technologies de l'Information et de la Communication \(Double Diplôme\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Ranked 1st among Double Degree students],[GPA: 18.46\/20 in Year 1; 18.50\/20 in Year 2],)
+    #v(design-highlights-top-margin);#highlights([Classé 1er parmi les étudiants du double diplôme],[Moyenne \(GPA\) : 18.46\/20 en L1 ; 18.50\/20 en L2],)
   ],
   right-content: [
-    Hanoi, Vietnam
+    Hanoï, Vietnam
 
 Sept 2023 – July 2025
   ],
@@ -552,15 +552,15 @@ Sept 2023 – July 2025
 
 #two-col-entry(
   left-content: [
-    #strong[ICTLab - USTH], Research Assistant
+    #strong[ICTLab - USTH], Assistant de Recherche
     #v(-design-text-leading)
 
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contribution à la recherche sur la #strong[détection d'incendie sensible au contexte]])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Publication du #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[dataset fire context awareness] pour benchmarker les VLMs],[Évaluation de Qwen2.5VL, InternVL3 et Gemma3 via l'implémentation de pipelines pour comparer exactitude, précision, rappel, F1-score et latence d'inférence],[Fine-tuning de VLMs pour augmenter la précision du modèle jusqu'à 85\% - 90\%],)
   ],
   right-content: [
-    Hanoi, Vietnam
+    Hanoï, Vietnam
 
 Mar 2025 – July 2025
   ],
@@ -581,9 +581,9 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Chatbot RAG pour la compréhension et l'extraction d'informations clés de documents juridiques])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Complete MLOps project with CI\/CD and Monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Projet MLOps complet avec CI\/CD et Monitoring],[Utilisation de RAG avec recherche sémantique, embeddings + LLMs pour récupérer les sections pertinentes],[#strong[Stack technique]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
   ],
 )
 
@@ -598,9 +598,9 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [IoT-based real-time fire detection and alerting system])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Système IoT de détection d'incendie et d'alerte en temps réel])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and Precision = 0.95\)],[Integrated Dockerized inference with Telegram alerts for live notifications],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 entraîné sur 1k+ images annotées de flammes\/fumée \(0.85 mAP0.5 et Précision = 0.95\)],[#strong[Stack technique]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
   ],
 )
 
@@ -610,7 +610,7 @@ Mar 2025 – July 2025
 
 
 #one-col-entry(
-  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash]
+  content: [#strong[Langages de programmation:] Python \(maîtrise\), Java, C++, Matlab, Bash]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
@@ -618,11 +618,11 @@ Mar 2025 – July 2025
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Tools \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
+  content: [#strong[Outils \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
+  content: [#strong[Langues:] Anglais C1 \(IELTS 7.5\), Français B2 \(DELF B2\)]
 )
 
 

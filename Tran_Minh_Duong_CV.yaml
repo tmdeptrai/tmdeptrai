@@ -78,10 +78,10 @@ cv:
     skills:
       - label: Programming Languages
         details: Python (proficient), Java, C++, Matlab, Bash
-      - label: ML / DL
+      - label: Framework / Libraries
         details: PyTorch, Hugging Face transformers, scikit-learn, numpy, matplotlib
-      - label: Tools / MLOps
-        details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana
+      - label: Tools
+        details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana, AWS
       - label: Languages
         details: English C1 (IELTS 7.5), French B2 (DELF B2)
 

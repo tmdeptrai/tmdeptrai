@@ -3,7 +3,7 @@
 
 #let name = "Tran Minh Duong"
 #let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Dec 2025"
+#let locale-catalog-last-updated-date-style = "Last updated in Jan 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
 #let design-section-titles-font-size = 1.4em
@@ -30,7 +30,7 @@
 #let design-header-photo-width = 3cm
 #let design-header-use-icons-for-connections = true
 #let design-header-name-font-family = "Source Sans 3"
-#let design-header-name-font-size = 35pt
+#let design-header-name-font-size = 30pt
 #let design-header-name-bold = true
 #let design-header-subtitle-font-family = "Source Sans 3"
 // Subtitle size: compute from the header name size in Typst so users can tweak
@@ -320,7 +320,7 @@
     let ending-index = starting-index + 1
     while (
       measure(connections-list.slice(starting-index, ending-index).join(separator)).width
-        < page.width - left-sum-right-margin - design-header-photo-width * 1.1
+        < page.width - left-sum-right-margin
     ) {
       ending-index = ending-index + 1
       if ending-index > connections-list.len() {
@@ -454,17 +454,6 @@
   )
 ]
 
-#two-col(
-  left-column-width: design-header-photo-width * 1.1,
-  right-column-width: 1fr,
-  left-content: [
-    #align(
-      left + horizon,
-      image("profile_picture.jpg", width: design-header-photo-width),
-    )
-  ],
-  column-gutter: 0cm,
-  right-content: [
   #align(center,
     [
         = Tran Minh Duong
@@ -483,7 +472,7 @@
 // Print connections:
 #let connections-list = (
   [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi, Vietnam],
-  [#box(original-link("mailto:tmd.banminhchotuban@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)tmd.banminhchotuban\@gmail.com])],
+  [#box(original-link("mailto:minhduongqo@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)minhduongqo\@gmail.com])],
   [#box(original-link("tel:+84-961-264-447")[#fa-icon("phone", size: 0.9em) #h(0.05cm)0961 264 447])],
   [#box(original-link("https://tmdeptrai.vercel.app/")[#fa-icon("link", size: 0.9em) #h(0.05cm)tmdeptrai.vercel.app])],
   [#box(original-link("https://linkedin.com/in/tran-minh-duong")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)tran-minh-duong])],
@@ -491,15 +480,13 @@
 )
 #connections(connections-list)
 
-  ],
-)
 
 
 == About Me
 
 
 #one-col-entry(
-  content: [I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG \(Retrieval-Augmented Generation\) chatbot and document-based retrieval pipelines.]
+  content: [I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
@@ -518,7 +505,7 @@
     #strong[La Rochelle University], Computer Science
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Student in exchange program],)
+    #v(design-highlights-top-margin);#highlights([Selected for International Exchange Program],)
   ],
   right-content: [
     La Rochelle, France
@@ -536,7 +523,7 @@ Sept 2025 – present
     #strong[University of Science and Technology of Hanoi], Information and Communication Technology \(Double Degree\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Ranked 1st among Double Degree students],[GPA: 18.46\/20 in Year 1; 18.50\/20 in Year 2],)
+    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked 1st in double degree cohort],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -557,7 +544,7 @@ Sept 2023 – July 2025
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -583,7 +570,7 @@ Mar 2025 – July 2025
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Complete MLOps project with CI\/CD and Monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
   ],
 )
 
@@ -598,7 +585,7 @@ Mar 2025 – July 2025
 )
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [IoT-based real-time fire detection and alerting system])], column-gutter: 0cm)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [\(Group Project Leader\) IoT-based real-time fire detection and alerting system.])], column-gutter: 0cm)
 
 #v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and Precision = 0.95\)],[Integrated Dockerized inference with Telegram alerts for live notifications],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
   ],
@@ -614,15 +601,29 @@ Mar 2025 – July 2025
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[ML \/ DL:] PyTorch, Hugging Face transformers, scikit-learn, numpy, matplotlib]
+  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, FastAPI, Langchain]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Tools \/ MLOps:] Git, Docker, CI\/CD, FastAPI, Prometheus, Grafana]
+  content: [#strong[Tools:] Git, Docker, CI\/CD, Prometheus, Grafana, AWS]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
   content: [#strong[Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
 )
+
+
+== Certifications
+
+
+
+#one-col-entry(
+  content: [
+    #link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[#strong[AWS Certified Solution Architect Associate]]
+
+    
+  ],
+)
+
 
 

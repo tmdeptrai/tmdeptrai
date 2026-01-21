@@ -1,9 +1,9 @@
 cv:
   name: Tran Minh Duong
   subtitle: AI Engineer Intern
-  photo: profile_picture.jpg
+  # photo: profile_picture.jpg
   location: Hanoi, Vietnam
-  email: tmd.banminhchotuban@gmail.com
+  email: minhduongqo@gmail.com
   phone: +84-961-264-447
   website: https://tmdeptrai.vercel.app/
   social_networks:
@@ -13,7 +13,7 @@ cv:
       username: tmdeptrai
   sections:
     about_me:
-      - I build and deploy production-ready ML systems with an eye for reliability and scalability. I have experience in designing and operating RAG (Retrieval-Augmented Generation) chatbot and document-based retrieval pipelines.
+      - I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.
       - Looking for AI Engineering / MLOps roles where I can ship and improve model delivery.
     education:
       - institution: La Rochelle University
@@ -25,7 +25,7 @@ cv:
         location: La Rochelle, France
         summary:
         highlights:
-          - 'Student in exchange program'
+          - 'Selected for International Exchange Program'
 
       - institution: University of Science and Technology of Hanoi
         area: Information and Communication Technology (Double Degree)
@@ -36,8 +36,7 @@ cv:
         location: Hanoi, Vietnam
         summary:
         highlights:
-          - Ranked 1st among Double Degree students
-          - "GPA: 18.46/20 in Year 1; 18.50/20 in Year 2"
+          - "GPA: 18.48/20 (≈ 3.89/4), ranked 1st in double degree cohort"
 
     experience:
       - company: ICTLab - USTH
@@ -49,7 +48,7 @@ cv:
         summary: Contributed to research on **context-aware fire detection** using Visual Language Models
         highlights:
           - Published the [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to benchmark multimodal VLMs
-          - Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare accuracy, precision, recall, F1-score and inference latency
+          - Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare various metrics and inference latency
           - Fine-tuned VLMs using **PEFT/LoRA** to boost model accuracy up to 85% - 90%
 
     projects:
@@ -60,7 +59,7 @@ cv:
         location:
         summary: RAG Chatbot for understanding and extracting key information from legal documents
         highlights:
-          - Complete MLOps project with CI/CD and Monitoring
+          - Designed and implemented end-to-end MLOps pipeline with CI/CD and monitoring
           - Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections
           - "**Techstack**: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana"
       
@@ -69,7 +68,7 @@ cv:
         start_date: 2025-03
         end_date: 2025-04
         location:
-        summary: IoT-based real-time fire detection and alerting system
+        summary: '(Group Project Leader) IoT-based real-time fire detection and alerting system.'
         highlights:
           - "YOLOv8 trained on 1k+ annotated flame/smoke images (0.85 mAP0.5 and Precision = 0.95)"
           - "Integrated Dockerized inference with Telegram alerts for live notifications"
@@ -79,11 +78,14 @@ cv:
       - label: Programming Languages
         details: Python (proficient), Java, C++, Matlab, Bash
       - label: Framework / Libraries
-        details: PyTorch, Hugging Face transformers, scikit-learn, numpy, matplotlib
+        details: PyTorch, Hugging Face transformers, FastAPI, Langchain
       - label: Tools
-        details: Git, Docker, CI/CD, FastAPI, Prometheus, Grafana, AWS
+        details: Git, Docker, CI/CD, Prometheus, Grafana, AWS
       - label: Languages
         details: English C1 (IELTS 7.5), French B2 (DELF B2)
+
+    certifications:
+      - name: '[AWS Certified Solution Architect Associate](https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url)'
 
     # publications:
     #   - title: 3D Finite Element Analysis of No-Insulation Coils
@@ -144,7 +146,7 @@ design:
     use_external_link_icon: true
   header:
     name_font_family: Source Sans 3
-    name_font_size: 35pt
+    name_font_size: 30pt
     name_bold: true
     photo_width: 3cm
     vertical_space_between_name_and_connections: 0.7cm

@@ -2,10 +2,10 @@ cv:
   name: Tran Minh Duong
   subtitle: AI Engineer Intern
   # photo: profile_picture.jpg
-  location: Hanoi, Vietnam
+  location: Hanoi
   email: minhduongqo@gmail.com
   phone: +84-961-264-447
-  website: https://tmdeptrai.vercel.app/
+  # website: https://tmdeptrai.vercel.app/
   social_networks:
     - network: LinkedIn
       username: tran-minh-duong
@@ -17,7 +17,7 @@ cv:
       - Looking for AI Engineering / MLOps roles where I can ship and improve model delivery.
     education:
       - institution: La Rochelle University
-        area: Computer Science
+        area: Informatique
         degree: BSc
         date:
         start_date: 2025-09
@@ -25,10 +25,10 @@ cv:
         location: La Rochelle, France
         summary:
         highlights:
-          - 'Selected for International Exchange Program'
+          - (In Progress) Comparative Analysis on OCR Post-Correction (BART vs. LLMs)
 
       - institution: University of Science and Technology of Hanoi
-        area: Information and Communication Technology (Double Degree)
+        area: ICT (Double Degree)
         degree: BSc
         date:
         start_date: 2023-09
@@ -37,6 +37,7 @@ cv:
         summary:
         highlights:
           - "GPA: 18.48/20 (≈ 3.89/4), ranked 1st in double degree cohort"
+          - "Awarded 100% Merit Scholarship for 2 consecutive years"
 
     experience:
       - company: ICTLab - USTH
@@ -52,36 +53,49 @@ cv:
           - Fine-tuned VLMs using **PEFT/LoRA** to boost model accuracy up to 85% - 90%
 
     projects:
+      - name: '[RAG on AWS](https://github.com/tmdeptrai/rag-on-aws)'
+        date:
+        start_date:
+        end_date:
+        location:
+        summary: End-to-End serverless hybrid RAG (Vector + Knowledge Graph) on AWS, entirely provisioned via Terraform
+        highlights:
+          - Architected event-driven ingestion pipeline (Lambda/S3) achieving minimal cost (**<$1/mo**)
+          - Automated tests in CI/CD using DeepEval (LLM-as-a-Judge) to prevent accuracy regression
+          - "**Techstack**: Terraform, Amazon Cognito, Lambda, S3, Pinecone, Neo4j, DeepEval, Docker"
+
       - name: '[Legal Contract Analyzer](https://github.com/tmdeptrai/LegalContractAnalyzer)'
         date:
-        start_date: 2025-07
-        end_date: 2025-08
+        start_date:
+        end_date:
         location:
         summary: RAG Chatbot for understanding and extracting key information from legal documents
         highlights:
           - Designed and implemented end-to-end MLOps pipeline with CI/CD and monitoring
-          - Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections
-          - "**Techstack**: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana"
+          - "Optimized retrieval via semantic search (vLLM + ChromaDB), achieving sub-200ms latency"
+          - "**Techstack**: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana"
       
-      - name: '[Fire Detection System](https://github.com/tmdeptrai/FireDetectionSystem)'
-        date:
-        start_date: 2025-03
-        end_date: 2025-04
-        location:
-        summary: '(Group Project Leader) IoT-based real-time fire detection and alerting system.'
-        highlights:
-          - "YOLOv8 trained on 1k+ annotated flame/smoke images (0.85 mAP0.5 and Precision = 0.95)"
-          - "Integrated Dockerized inference with Telegram alerts for live notifications"
-          - "**Techstack**: Roboflow, Ultralytics YOLOv8, Docker, OpenCV"
+      # - name: '[Fire Detection System](https://github.com/tmdeptrai/FireDetectionSystem)'
+      #   date:
+      #   start_date: 2025-03
+      #   end_date: 2025-04
+      #   location:
+      #   summary: '(Group Project Leader) IoT-based real-time fire detection and alerting system.'
+      #   highlights:
+      #     - "YOLOv8 trained on 1k+ annotated flame/smoke images (0.85 mAP0.5 and Precision = 0.95)"
+      #     - "Integrated Dockerized inference with Telegram alerts for live notifications"
+      #     - "**Techstack**: Roboflow, Ultralytics YOLOv8, Docker, OpenCV"
 
     skills:
       - label: Programming Languages
-        details: Python (proficient), Java, C++, Matlab, Bash
+        details: Python (proficient), Java, C++, Bash, SQL
       - label: Framework / Libraries
-        details: PyTorch, Hugging Face transformers, FastAPI, Langchain
-      - label: Tools
-        details: Git, Docker, CI/CD, Prometheus, Grafana, AWS
-      - label: Languages
+        details: PyTorch, Hugging Face transformers, Langchain, FastAPI
+      - label: Databases
+        details: PostgreSQL, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
+      - label: Tools & DevOps
+        details: AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana  
+      - label: Foreign Languages
         details: English C1 (IELTS 7.5), French B2 (DELF B2)
 
     certifications:
@@ -149,8 +163,8 @@ design:
     name_font_size: 30pt
     name_bold: true
     photo_width: 3cm
-    vertical_space_between_name_and_connections: 0.7cm
-    vertical_space_between_connections_and_first_section: 0.7cm
+    vertical_space_between_name_and_connections: 0.6cm
+    vertical_space_between_connections_and_first_section: 0.6cm
     horizontal_space_between_connections: 0.5cm
     connections_font_family: Source Sans 3
     separator_between_connections: ''

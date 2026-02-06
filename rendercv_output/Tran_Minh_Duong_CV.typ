@@ -3,7 +3,7 @@
 
 #let name = "Tran Minh Duong"
 #let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Jan 2026"
+#let locale-catalog-last-updated-date-style = "Last updated in Feb 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "us-letter"
 #let design-section-titles-font-size = 1.4em
@@ -40,8 +40,8 @@
 #let design-header-subtitle-font-size = design-header-name-font-size * 0.45
 #let design-header-subtitle-font-weight = 700
 #let design-header-connections-font-family = "Source Sans 3"
-#let design-header-vertical-space-between-name-and-connections = 0.7cm
-#let design-header-vertical-space-between-connections-and-first-section = 0.7cm
+#let design-header-vertical-space-between-name-and-connections = 0.6cm
+#let design-header-vertical-space-between-connections-and-first-section = 0.6cm
 #let design-header-use-icons-for-connections = true
 #let design-header-horizontal-space-between-connections = 0.5cm
 #let design-header-separator-between-connections = ""
@@ -471,10 +471,9 @@
 
 // Print connections:
 #let connections-list = (
-  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi, Vietnam],
+  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi],
   [#box(original-link("mailto:minhduongqo@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)minhduongqo\@gmail.com])],
   [#box(original-link("tel:+84-961-264-447")[#fa-icon("phone", size: 0.9em) #h(0.05cm)0961 264 447])],
-  [#box(original-link("https://tmdeptrai.vercel.app/")[#fa-icon("link", size: 0.9em) #h(0.05cm)tmdeptrai.vercel.app])],
   [#box(original-link("https://linkedin.com/in/tran-minh-duong")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)tran-minh-duong])],
   [#box(original-link("https://github.com/tmdeptrai")[#fa-icon("github", size: 0.9em) #h(0.05cm)tmdeptrai])],
 )
@@ -502,10 +501,10 @@
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[La Rochelle University], Computer Science
+    #strong[La Rochelle University], Informatique
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Selected for International Exchange Program],)
+    #v(design-highlights-top-margin);#highlights([\(In Progress\) Comparative Analysis on OCR Post-Correction \(BART vs. LLMs\)],)
   ],
   right-content: [
     La Rochelle, France
@@ -520,10 +519,10 @@ Sept 2025 – present
   left-column-width: 1cm,
   left-content: [#strong[BSc]],
   middle-content: [
-    #strong[University of Science and Technology of Hanoi], Information and Communication Technology \(Double Degree\)
+    #strong[University of Science and Technology of Hanoi], ICT \(Double Degree\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked 1st in double degree cohort],)
+    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked 1st in double degree cohort],[Awarded 100\% Merit Scholarship for 2 consecutive years],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -558,36 +557,28 @@ Mar 2025 – July 2025
 == Projects
 
 
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/tmdeptrai/LegalContractAnalyzer")[#strong[Legal Contract Analyzer]]
-  ],
-  right-content: [
-    July 2025 – Aug 2025
-  ],
-)
+
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
+    #link("https://github.com/tmdeptrai/rag-on-aws")[#strong[RAG on AWS]]
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring],[Uses RAG with semantic search, embeddings + LLMs to retrieve relevant sections],[#strong[Techstack]: Github Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
+    #v(-design-text-leading)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [End-to-End serverless hybrid RAG \(Vector + Knowledge Graph\) on AWS, entirely provisioned via Terraform])], column-gutter: 0cm)
+
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Architected event-driven ingestion pipeline \(Lambda\/S3\) achieving minimal cost \(#strong[<\$1\/mo]\)],[Automated tests in CI\/CD using DeepEval \(LLM-as-a-Judge\) to prevent accuracy regression],[#strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, Pinecone, Neo4j, DeepEval, Docker],)
   ],
 )
 
 #v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/tmdeptrai/FireDetectionSystem")[#strong[Fire Detection System]]
-  ],
-  right-content: [
-    Mar 2025 – Apr 2025
-  ],
-)
+
 #one-col-entry(
   content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [\(Group Project Leader\) IoT-based real-time fire detection and alerting system.])], column-gutter: 0cm)
+    #link("https://github.com/tmdeptrai/LegalContractAnalyzer")[#strong[Legal Contract Analyzer]]
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([YOLOv8 trained on 1k+ annotated flame\/smoke images \(0.85 mAP0.5 and Precision = 0.95\)],[Integrated Dockerized inference with Telegram alerts for live notifications],[#strong[Techstack]: Roboflow, Ultralytics YOLOv8, Docker, OpenCV],)
+    #v(-design-text-leading)
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
+
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring],[Optimized retrieval via semantic search \(vLLM + ChromaDB\), achieving sub-200ms latency],[#strong[Techstack]: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
   ],
 )
 
@@ -597,19 +588,23 @@ Mar 2025 – July 2025
 
 
 #one-col-entry(
-  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash]
+  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash, SQL]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, FastAPI, Langchain]
+  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Tools:] Git, Docker, CI\/CD, Prometheus, Grafana, AWS]
+  content: [#strong[Databases:] PostgreSQL, MongoDB, Neo4j \(Graph\), Pinecone \(Vector\), ChromaDB]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
+  content: [#strong[Tools & DevOps:] AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana]
+)
+#v(design-entries-vertical-space-between-entries)
+#one-col-entry(
+  content: [#strong[Foreign Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
 )
 
 

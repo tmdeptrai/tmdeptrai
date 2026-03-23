@@ -36,21 +36,22 @@ cv:
         location: Hanoi, Vietnam
         summary:
         highlights:
-          - "GPA: 18.48/20 (≈ 3.89/4), ranked 1st in double degree cohort"
+          - "GPA: 18.48/20 (≈ 3.89/4), ranked [1st in double degree cohort](https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing)"
           - "Awarded 100% Merit Scholarship for 2 consecutive years"
 
     experience:
       - company: ICTLab - USTH
         position: Research Assistant
         date:
-        start_date: 2025-03
-        end_date: 2025-07
+        start_date: 2024-08
+        end_date: 2025-08
         location: Hanoi, Vietnam
         summary: Contributed to research on **context-aware fire detection** using Visual Language Models
         highlights:
           - Published the [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to benchmark multimodal VLMs
-          - Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare various metrics and inference latency
-          - Fine-tuned VLMs using **PEFT/LoRA** to boost model accuracy up to 85% - 90%
+          - Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency
+          - Fine-tuned VLMs using **PEFT/LoRA** to boost models accuracy from 60% to 85%-90%, using different quantization configurations, tracked via **Weights & Biases**
+          - Deployed models on **Jetson Nano** for real-time inference with sub-second latency
 
     projects:
       - name: '[RAG on AWS](https://github.com/tmdeptrai/rag-on-aws)'
@@ -62,7 +63,7 @@ cv:
         highlights:
           - Architected event-driven ingestion pipeline (Lambda/S3) achieving minimal cost (**<$1/mo**)
           - Automated tests in CI/CD using DeepEval (LLM-as-a-Judge) to prevent accuracy regression
-          - "**Techstack**: Terraform, Amazon Cognito, Lambda, S3, Pinecone, Neo4j, DeepEval, Docker"
+          - "**Techstack**: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker"
 
       - name: '[Legal Contract Analyzer](https://github.com/tmdeptrai/LegalContractAnalyzer)'
         date:
@@ -90,7 +91,7 @@ cv:
       - label: Programming Languages
         details: Python (proficient), Java, C++, Bash, SQL
       - label: Framework / Libraries
-        details: PyTorch, Hugging Face transformers, Langchain, FastAPI
+        details: PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases
       - label: Databases
         details: PostgreSQL, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
       - label: Tools & DevOps
@@ -99,7 +100,8 @@ cv:
         details: English C1 (IELTS 7.5), French B2 (DELF B2)
 
     certifications:
-      - name: '[AWS Certified Solution Architect Associate](https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url)'
+      - name: '[AWS Certified Solution Architect Associate (AWS-SAA-C03)](https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url)'
+      - name: '[Deep Learning in Python: CNN-based Image Classification (Udemy)](https://drive.google.com/file/d/1o-KOgXsoiyICZlysI0Wh3y2AcAR5omto/view?usp=sharing)'
 
     # publications:
     #   - title: 3D Finite Element Analysis of No-Insulation Coils
@@ -135,7 +137,7 @@ cv:
 design:
   theme: classic
   page:
-    size: us-letter
+    size: a4
     top_margin: 2cm
     bottom_margin: 2cm
     left_margin: 2cm
@@ -163,8 +165,8 @@ design:
     name_font_size: 30pt
     name_bold: true
     photo_width: 3cm
-    vertical_space_between_name_and_connections: 0.6cm
-    vertical_space_between_connections_and_first_section: 0.6cm
+    vertical_space_between_name_and_connections: 0.5cm
+    vertical_space_between_connections_and_first_section: 0.5cm
     horizontal_space_between_connections: 0.5cm
     connections_font_family: Source Sans 3
     separator_between_connections: ''
@@ -180,10 +182,10 @@ design:
     vertical_space_above: 0.5cm
     vertical_space_below: 0.3cm
   entries:
-    date_and_location_width: 4.15cm
+    date_and_location_width: 3.7cm
     left_and_right_margin: 0.2cm
     horizontal_space_between_columns: 0.1cm
-    vertical_space_between_entries: 1.2em
+    vertical_space_between_entries: 1em
     allow_page_break_in_sections: true
     allow_page_break_in_entries: true
     short_second_row: false

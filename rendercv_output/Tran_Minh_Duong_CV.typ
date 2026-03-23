@@ -3,9 +3,9 @@
 
 #let name = "Tran Minh Duong"
 #let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Feb 2026"
+#let locale-catalog-last-updated-date-style = "Last updated in Mar 2026"
 #let locale-catalog-language = "en"
-#let design-page-size = "us-letter"
+#let design-page-size = "a4"
 #let design-section-titles-font-size = 1.4em
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
@@ -40,8 +40,8 @@
 #let design-header-subtitle-font-size = design-header-name-font-size * 0.45
 #let design-header-subtitle-font-weight = 700
 #let design-header-connections-font-family = "Source Sans 3"
-#let design-header-vertical-space-between-name-and-connections = 0.6cm
-#let design-header-vertical-space-between-connections-and-first-section = 0.6cm
+#let design-header-vertical-space-between-name-and-connections = 0.5cm
+#let design-header-vertical-space-between-connections-and-first-section = 0.5cm
 #let design-header-use-icons-for-connections = true
 #let design-header-horizontal-space-between-connections = 0.5cm
 #let design-header-separator-between-connections = ""
@@ -52,8 +52,8 @@
 #let design-highlights-left-margin = 0.4cm
 #let design-highlights-vertical-space-between-highlights = 0.25cm
 #let design-highlights-horizontal-space-between-bullet-and-highlights = 0.5em
-#let design-entries-vertical-space-between-entries = 1.2em
-#let design-entries-date-and-location-width = 4.15cm
+#let design-entries-vertical-space-between-entries = 1em
+#let design-entries-date-and-location-width = 3.7cm
 #let design-entries-allow-page-break-in-entries = true
 #let design-entries-horizontal-space-between-columns = 0.1cm
 #let design-entries-left-and-right-margin = 0.2cm
@@ -522,7 +522,7 @@ Sept 2025 – present
     #strong[University of Science and Technology of Hanoi], ICT \(Double Degree\)
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked 1st in double degree cohort],[Awarded 100\% Merit Scholarship for 2 consecutive years],)
+    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked #link("https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing")[1st in double degree cohort]],[Awarded 100\% Merit Scholarship for 2 consecutive years],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -543,12 +543,12 @@ Sept 2023 – July 2025
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and Gemma3 by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost model accuracy up to 85\% - 90\%],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]],[Deployed models on #strong[Jetson Nano] for real-time inference with sub-second latency],)
   ],
   right-content: [
     Hanoi, Vietnam
 
-Mar 2025 – July 2025
+Aug 2024 – Aug 2025
   ],
 )
 
@@ -565,7 +565,7 @@ Mar 2025 – July 2025
     #v(-design-text-leading)
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [End-to-End serverless hybrid RAG \(Vector + Knowledge Graph\) on AWS, entirely provisioned via Terraform])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Architected event-driven ingestion pipeline \(Lambda\/S3\) achieving minimal cost \(#strong[<\$1\/mo]\)],[Automated tests in CI\/CD using DeepEval \(LLM-as-a-Judge\) to prevent accuracy regression],[#strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, Pinecone, Neo4j, DeepEval, Docker],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Architected event-driven ingestion pipeline \(Lambda\/S3\) achieving minimal cost \(#strong[<\$1\/mo]\)],[Automated tests in CI\/CD using DeepEval \(LLM-as-a-Judge\) to prevent accuracy regression],[#strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker],)
   ],
 )
 
@@ -588,11 +588,11 @@ Mar 2025 – July 2025
 
 
 #one-col-entry(
-  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Matlab, Bash, SQL]
+  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Bash, SQL]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI]
+  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
@@ -614,7 +614,17 @@ Mar 2025 – July 2025
 
 #one-col-entry(
   content: [
-    #link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[#strong[AWS Certified Solution Architect Associate]]
+    #link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[#strong[AWS Certified Solution Architect Associate \(AWS-SAA-C03\)]]
+
+    
+  ],
+)
+
+#v(design-entries-vertical-space-between-entries)
+
+#one-col-entry(
+  content: [
+    #link("https://drive.google.com/file/d/1o-KOgXsoiyICZlysI0Wh3y2AcAR5omto/view?usp=sharing")[#strong[Deep Learning in Python: CNN-based Image Classification \(Udemy\)]]
 
     
   ],

@@ -15,6 +15,7 @@ cv:
     about_me:
       - I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.
       - Looking for AI Engineering / MLOps roles where I can ship and improve model delivery.
+
     education:
       - institution: La Rochelle University
         area: Informatique
@@ -25,7 +26,7 @@ cv:
         location: La Rochelle, France
         summary:
         highlights:
-          - (In Progress) Comparative Analysis on OCR Post-Correction (BART vs. LLMs)
+          - "Thesis: Comparative Analysis of LLMs on OCR Post-Correction"
 
       - institution: University of Science and Technology of Hanoi
         area: ICT (Double Degree)
@@ -41,7 +42,7 @@ cv:
 
     experience:
       - company: ICTLab - USTH
-        position: Research Assistant
+        position: AI Research Assistant
         date:
         start_date: 2024-08
         end_date: 2025-08
@@ -51,7 +52,16 @@ cv:
           - Published the [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to benchmark multimodal VLMs
           - Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency
           - Fine-tuned VLMs using **PEFT/LoRA** to boost models accuracy from 60% to 85%-90%, using different quantization configurations, tracked via **Weights & Biases**
-          - Deployed models on **Jetson Nano** for real-time inference with sub-second latency
+          # - Deployed models on **Jetson Nano** for real-time inference with sub-second latency
+
+    publications:
+      - title: 'Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study'
+        authors:
+          - Nhat Quang Doan, Anh Tuan Giang, **Minh Duong Tran**, et al. 
+        doi: 
+        url: 
+        journal: Scientific Reports (Nature Portfolio). [Q1 Journal]. (Accepted)
+        date: 2026-04
 
     projects:
       - name: '[RAG on AWS](https://github.com/tmdeptrai/rag-on-aws)'
@@ -93,7 +103,7 @@ cv:
       - label: Framework / Libraries
         details: PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases
       - label: Databases
-        details: PostgreSQL, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
+        details: PostgreSQL, Supabase, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
       - label: Tools & DevOps
         details: AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana  
       - label: Foreign Languages
@@ -101,18 +111,7 @@ cv:
 
     certifications:
       - name: '[AWS Certified Solution Architect Associate (AWS-SAA-C03)](https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url)'
-      - name: '[Deep Learning in Python: CNN-based Image Classification (Udemy)](https://drive.google.com/file/d/1o-KOgXsoiyICZlysI0Wh3y2AcAR5omto/view?usp=sharing)'
-
-    # publications:
-    #   - title: 3D Finite Element Analysis of No-Insulation Coils
-    #     authors:
-    #       - Frodo Baggins
-    #       - '***John Doe***'
-    #       - Samwise Gamgee
-    #     doi: 10.1109/TASC.2023.3340648
-    #     url:
-    #     journal:
-    #     date: 2004-01
+      # - name: '[Deep Learning in Python: CNN-based Image Classification (Udemy)](https://drive.google.com/file/d/1o-KOgXsoiyICZlysI0Wh3y2AcAR5omto/view?usp=sharing)'
 
 
     # awards:
@@ -138,8 +137,8 @@ design:
   theme: classic
   page:
     size: a4
-    top_margin: 2cm
-    bottom_margin: 2cm
+    top_margin: 1.75cm
+    bottom_margin: 1.75cm
     left_margin: 2cm
     right_margin: 2cm
     show_page_numbering: true

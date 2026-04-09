@@ -3,7 +3,7 @@
 
 #let name = "Tran Minh Duong"
 #let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Mar 2026"
+#let locale-catalog-last-updated-date-style = "Last updated in Apr 2026"
 #let locale-catalog-language = "en"
 #let design-page-size = "a4"
 #let design-section-titles-font-size = 1.4em
@@ -57,8 +57,8 @@
 #let design-entries-allow-page-break-in-entries = true
 #let design-entries-horizontal-space-between-columns = 0.1cm
 #let design-entries-left-and-right-margin = 0.2cm
-#let design-page-top-margin = 2cm
-#let design-page-bottom-margin = 2cm
+#let design-page-top-margin = 1.75cm
+#let design-page-bottom-margin = 1.75cm
 #let design-page-left-margin = 2cm
 #let design-page-right-margin = 2cm
 #let design-page-show-last-updated-date = true
@@ -504,7 +504,7 @@
     #strong[La Rochelle University], Informatique
     #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([\(In Progress\) Comparative Analysis on OCR Post-Correction \(BART vs. LLMs\)],)
+    #v(design-highlights-top-margin);#highlights([Thesis: Comparative Analysis of LLMs on OCR Post-Correction],)
   ],
   right-content: [
     La Rochelle, France
@@ -538,12 +538,12 @@ Sept 2023 – July 2025
 
 #two-col-entry(
   left-content: [
-    #strong[ICTLab - USTH], Research Assistant
+    #strong[ICTLab - USTH], AI Research Assistant
     #v(-design-text-leading)
 
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]],[Deployed models on #strong[Jetson Nano] for real-time inference with sub-second latency],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]],)
   ],
   right-content: [
     Hanoi, Vietnam
@@ -551,6 +551,25 @@ Sept 2023 – July 2025
 Aug 2024 – Aug 2025
   ],
 )
+
+
+
+== Publications
+
+
+#two-col-entry(
+  left-content: [
+    #strong[Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study]
+
+  ],
+  right-content: [
+    Apr 2026
+  ],
+)
+#one-col-entry(content:[
+  #v(design-highlights-top-margin);Nhat Quang Doan, Anh Tuan Giang, #strong[Minh Duong Tran], et al.
+
+#v(design-highlights-top-margin - design-text-leading)Scientific Reports \(Nature Portfolio\). \[Q1 Journal\]. \(Accepted\)])
 
 
 
@@ -596,7 +615,7 @@ Aug 2024 – Aug 2025
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Databases:] PostgreSQL, MongoDB, Neo4j \(Graph\), Pinecone \(Vector\), ChromaDB]
+  content: [#strong[Databases:] PostgreSQL, Supabase, MongoDB, Neo4j \(Graph\), Pinecone \(Vector\), ChromaDB]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
@@ -615,16 +634,6 @@ Aug 2024 – Aug 2025
 #one-col-entry(
   content: [
     #link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[#strong[AWS Certified Solution Architect Associate \(AWS-SAA-C03\)]]
-
-    
-  ],
-)
-
-#v(design-entries-vertical-space-between-entries)
-
-#one-col-entry(
-  content: [
-    #link("https://drive.google.com/file/d/1o-KOgXsoiyICZlysI0Wh3y2AcAR5omto/view?usp=sharing")[#strong[Deep Learning in Python: CNN-based Image Classification \(Udemy\)]]
 
     
   ],

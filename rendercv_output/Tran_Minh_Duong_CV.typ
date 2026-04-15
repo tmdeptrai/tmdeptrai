@@ -567,9 +567,9 @@ Aug 2024 – Aug 2025
   ],
 )
 #one-col-entry(content:[
-  #v(design-highlights-top-margin);Nhat Quang Doan, Anh Tuan Giang, #strong[Minh Duong Tran], et al.
+#v(design-highlights-top-margin);Nhat Quang Doan, Anh Tuan Giang, #strong[Minh Duong Tran], et al.
 
-#v(design-highlights-top-margin - design-text-leading)Scientific Reports \(Nature Portfolio\). \[Q1 Journal\]. \(Accepted\)])
+#v(design-highlights-top-margin - design-text-leading)#link("https://doi.org/https://doi.org/10.1038/s41598-026-48743-5")[https://doi.org/10.1038/s41598-026-48743-5] (Scientific Reports \(Nature Portfolio\)\[Q1 Journal\])])
 
 
 

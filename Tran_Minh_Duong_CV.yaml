@@ -58,9 +58,9 @@ cv:
       - title: 'Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study'
         authors:
           - Nhat Quang Doan, Anh Tuan Giang, **Minh Duong Tran**, et al. 
-        doi: 
-        url: 
-        journal: Scientific Reports (Nature Portfolio). [Q1 Journal]. (Accepted)
+        doi: https://doi.org/10.1038/s41598-026-48743-5
+        url: https://www.nature.com/articles/s41598-026-48743-5
+        journal: Scientific Reports (Nature Portfolio)[Q1 Journal]
         date: 2026-04
 
     projects:

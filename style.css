@@ -598,32 +598,11 @@ footer {
     max-width: 800px;
 }
 
-.friends-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.slide-caption:empty {
+    display: none;
 }
 
-.friend-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.friend-card:hover {
-    transform: scale(1.03);
-}
-
-.friend-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-}
-
-/* Responsive */
+/* CV Download Section */
 @media (max-width: 850px) {
     .hero-content {
         flex-direction: column-reverse;

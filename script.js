@@ -59,9 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Carousel Logic
-    const track = document.getElementById('carouselTrack');
-    if (track && track.children.length > 0) {
+    // Reusable Carousel Logic
+    const initCarousel = (trackId, nextBtnId, prevBtnId) => {
+        const track = document.getElementById(trackId);
+        if (!track || track.children.length === 0) return;
+
         // Clone first 4 slides for seamless loop
         const originalSlides = Array.from(track.children);
         originalSlides.slice(0, 4).forEach(slide => {
@@ -70,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const slides = Array.from(track.children);
-        const nextButton = document.getElementById('nextBtn');
-        const prevButton = document.getElementById('prevBtn');
+        const nextButton = document.getElementById(nextBtnId);
+        const prevButton = document.getElementById(prevBtnId);
         
         let currentIndex = 0;
         let autoPlayInterval;
@@ -98,10 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
             isTransitioning = true;
             
             if (currentIndex <= 0) {
-                // Jump to the clones at the end first
                 currentIndex = originalSlides.length;
                 updateCarousel(false);
-                // Then animate one step back
                 setTimeout(() => {
                     currentIndex--;
                     updateCarousel(true);
@@ -112,17 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Handle the end of transition for seamless loop
         track.addEventListener('transitionend', () => {
             isTransitioning = false;
-            // If we reached the clones at the end
             if (currentIndex >= originalSlides.length) {
                 currentIndex = 0;
                 updateCarousel(false);
             }
         });
 
-        // Auto play every 2 seconds
         const startAutoPlay = () => {
             autoPlayInterval = setInterval(moveToNextSlide, 2000);
         };
@@ -147,21 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Initialize
         startAutoPlay();
-
-        // Pause on hover
         track.addEventListener('mouseenter', stopAutoPlay);
         track.addEventListener('mouseleave', startAutoPlay);
+        window.addEventListener('resize', () => updateCarousel(false));
+        
+        return { track }; // Return for animation observation
+    };
 
-        // Update on window resize
-        window.addEventListener('resize', () => {
-            updateCarousel(false);
-        });
-    }
+    // Initialize both carousels
+    initCarousel('carouselTrack', 'nextBtn', 'prevBtn');
+    initCarousel('friendTrack', 'friendNextBtn', 'friendPrevBtn');
 
     // Apply animation to sections and cards
-    const animatedElements = document.querySelectorAll('section, .media-card, .project-card, .edu-item, .exp-item, .pub-card, .carousel-wrapper, .friend-card, .cv-container');
+    const animatedElements = document.querySelectorAll('section, .media-card, .project-card, .edu-item, .exp-item, .pub-card, .carousel-wrapper, .cv-container');
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';

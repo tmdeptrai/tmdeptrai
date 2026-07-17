@@ -1,643 +1,271 @@
+// Import the rendercv function and all the refactored components
+#import "@preview/rendercv:0.3.0": *
 
-#import "@preview/fontawesome:0.5.0": fa-icon
-
-#let name = "Tran Minh Duong"
-#let locale-catalog-page-numbering-style = context { "Tran Minh Duong - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in Apr 2026"
-#let locale-catalog-language = "en"
-#let design-page-size = "a4"
-#let design-section-titles-font-size = 1.4em
-#let design-colors-text = rgb(0, 0, 0)
-#let design-colors-section-titles = rgb(0, 79, 144)
-#let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
-#let design-colors-name = rgb(0, 79, 144)
-#let design-colors-connections = rgb(0, 79, 144)
-#let design-colors-links = rgb(0, 79, 144)
-#let design-section-titles-font-family = "Source Sans 3"
-#let design-section-titles-bold = true
-#let design-section-titles-line-thickness = 0.5pt
-#let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "with-parial-line"
-#let design-section-titles-vertical-space-above = 0.5cm
-#let design-section-titles-vertical-space-below = 0.3cm
-#let design-section-titles-small-caps = false
-#let design-links-use-external-link-icon = true
-#let design-text-font-size = 10pt
-#let design-text-leading = 0.6em
-#let design-text-font-family = "Source Sans 3"
-#let design-text-alignment = "justified"
-#let design-text-date-and-location-column-alignment = right
-#let design-header-photo-width = 3cm
-#let design-header-use-icons-for-connections = true
-#let design-header-name-font-family = "Source Sans 3"
-#let design-header-name-font-size = 30pt
-#let design-header-name-bold = true
-#let design-header-subtitle-font-family = "Source Sans 3"
-// Subtitle size: compute from the header name size in Typst so users can tweak
-// the name size via `design.header.name_font_size` in YAML without adding
-// custom (unknown) YAML keys. This avoids Jinja-level arithmetic on unit
-// strings which would fail.
-#let design-header-subtitle-font-size = design-header-name-font-size * 0.45
-#let design-header-subtitle-font-weight = 700
-#let design-header-connections-font-family = "Source Sans 3"
-#let design-header-vertical-space-between-name-and-connections = 0.5cm
-#let design-header-vertical-space-between-connections-and-first-section = 0.5cm
-#let design-header-use-icons-for-connections = true
-#let design-header-horizontal-space-between-connections = 0.5cm
-#let design-header-separator-between-connections = ""
-#let design-header-alignment = center
-#let design-highlights-summary-left-margin = 0cm
-#let design-highlights-bullet = "•"
-#let design-highlights-top-margin = 0.25cm
-#let design-highlights-left-margin = 0.4cm
-#let design-highlights-vertical-space-between-highlights = 0.25cm
-#let design-highlights-horizontal-space-between-bullet-and-highlights = 0.5em
-#let design-entries-vertical-space-between-entries = 1em
-#let design-entries-date-and-location-width = 3.7cm
-#let design-entries-allow-page-break-in-entries = true
-#let design-entries-horizontal-space-between-columns = 0.1cm
-#let design-entries-left-and-right-margin = 0.2cm
-#let design-page-top-margin = 1.75cm
-#let design-page-bottom-margin = 1.75cm
-#let design-page-left-margin = 2cm
-#let design-page-right-margin = 2cm
-#let design-page-show-last-updated-date = true
-#let design-page-show-page-numbering = true
-#let design-links-underline = false
-#let design-entry-types-education-entry-degree-column-width = 1cm
-#let date = datetime.today()
-
-// Metadata:
-#set document(author: name, title: name + "'s CV", date: date)
-
-// Page settings:
-#set page(
-  margin: (
-    top: design-page-top-margin,
-    bottom: design-page-bottom-margin,
-    left: design-page-left-margin,
-    right: design-page-right-margin,
+// Apply the rendercv template with custom configuration
+#show: rendercv.with(
+  name: "Tran Minh Duong",
+  title: "Tran Minh Duong - CV",
+  footer: context { [#emph[Tran Minh Duong -- #str(here().page())\/#str(counter(page).final().first())]] },
+  top-note: [ #emph[Last updated in July 2026] ],
+  locale-catalog-language: "en",
+  text-direction: ltr,
+  page-size: "a4",
+  page-top-margin: 1.75cm,
+  page-bottom-margin: 1.75cm,
+  page-left-margin: 2cm,
+  page-right-margin: 2cm,
+  page-show-footer: true,
+  page-show-top-note: true,
+  colors-body: rgb(0, 0, 0),
+  colors-name: rgb(0, 79, 144),
+  colors-headline: rgb(0, 79, 144),
+  colors-connections: rgb(0, 79, 144),
+  colors-section-titles: rgb(0, 79, 144),
+  colors-links: rgb(0, 79, 144),
+  colors-footer: rgb(128, 128, 128),
+  colors-top-note: rgb(128, 128, 128),
+  typography-line-spacing: 0.6em,
+  typography-alignment: "justified",
+  typography-date-and-location-column-alignment: right,
+  typography-font-family-body: "Source Sans 3",
+  typography-font-family-name: "Source Sans 3",
+  typography-font-family-headline: "Source Sans 3",
+  typography-font-family-connections: "Source Sans 3",
+  typography-font-family-section-titles: "Source Sans 3",
+  typography-font-size-body: 10pt,
+  typography-font-size-name: 30pt,
+  typography-font-size-headline: 10pt,
+  typography-font-size-connections: 10pt,
+  typography-font-size-section-titles: 1.4em,
+  typography-small-caps-name: false,
+  typography-small-caps-headline: false,
+  typography-small-caps-connections: false,
+  typography-small-caps-section-titles: false,
+  typography-bold-name: true,
+  typography-bold-headline: false,
+  typography-bold-connections: false,
+  typography-bold-section-titles: true,
+  links-underline: false,
+  links-show-external-link-icon: true,
+  header-alignment: center,
+  header-photo-width: 3.5cm,
+  header-space-below-name: 0.7cm,
+  header-space-below-headline: 0.7cm,
+  header-space-below-connections: 0.7cm,
+  header-connections-hyperlink: true,
+  header-connections-show-icons: true,
+  header-connections-display-urls-instead-of-usernames: false,
+  header-connections-separator: "",
+  header-connections-space-between-connections: 0.5cm,
+  section-titles-type: "with_partial_line",
+  section-titles-line-thickness: 0.5pt,
+  section-titles-space-above: 0.5cm,
+  section-titles-space-below: 0.3cm,
+  sections-allow-page-break: true,
+  sections-space-between-text-based-entries: 0.3em,
+  sections-space-between-regular-entries: 1.2em,
+  entries-date-and-location-width: 3.4cm,
+  entries-side-space: 0cm,
+  entries-space-between-columns: 0.1cm,
+  entries-allow-page-break: false,
+  entries-short-second-row: true,
+  entries-degree-width: 1cm,
+  entries-summary-space-left: 0cm,
+  entries-summary-space-above: 0cm,
+  entries-highlights-bullet:  "•" ,
+  entries-highlights-nested-bullet:  "•" ,
+  entries-highlights-space-left: 0.15cm,
+  entries-highlights-space-above: 0cm,
+  entries-highlights-space-between-items: 0cm,
+  entries-highlights-space-between-bullet-and-text: 0.5em,
+  date: datetime(
+    year: 2026,
+    month: 7,
+    day: 17,
   ),
-  paper: design-page-size,
-  footer: if design-page-show-page-numbering {
-    text(
-      fill: design-colors-last-updated-date-and-page-numbering,
-      align(center, [_#locale-catalog-page-numbering-style _]),
-      size: 0.9em,
-    )
-  } else {
-    none
-  },
-  footer-descent: 0% - 0.3em + design-page-bottom-margin / 2,
-)
-// Text settings:
-#let justify
-#let hyphenate
-#if design-text-alignment == "justified" {
-  justify = true
-  hyphenate = true
-} else if design-text-alignment == "left" {
-  justify = false
-  hyphenate = false
-} else if design-text-alignment == "justified-with-no-hyphenation" {
-  justify = true
-  hyphenate = false
-}
-#set text(
-  font: design-text-font-family,
-  size: design-text-font-size,
-  lang: locale-catalog-language,
-  hyphenate: hyphenate,
-  fill: design-colors-text,
-  // Disable ligatures for better ATS compatibility:
-  ligatures: true,
-)
-#set par(
-  spacing: 0pt,
-  leading: design-text-leading,
-  justify: justify,
-)
-#set enum(
-  spacing: design-entries-vertical-space-between-entries,
 )
 
-// Highlights settings:
-#let highlights(..content) = {
-  list(
-    ..content,
-    marker: design-highlights-bullet,
-    spacing: design-highlights-vertical-space-between-highlights,
-    indent: design-highlights-left-margin,
-    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
-  )
-}
-#show list: set list(
-  marker: design-highlights-bullet,
-  spacing: 0pt,
-  indent: 0pt,
-  body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+
+= Tran Minh Duong
+
+  #headline([Junior AI Engineer])
+
+#connections(
+  [#connection-with-icon("location-dot")[Hanoi]],
+  [#link("mailto:minhduongqo@gmail.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[minhduongqo\@gmail.com]]],
+  [#link("tel:+84-961-264-447", icon: false, if-underline: false, if-color: false)[#connection-with-icon("phone")[0961 264 447]]],
+  [#link("https://linkedin.com/in/tran-minh-duong", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[tran-minh-duong]]],
+  [#link("https://github.com/tmdeptrai", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tmdeptrai]]],
 )
-
-// Entry utilities:
-#let three-col(
-  left-column-width: 1fr,
-  middle-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (auto, auto, auto),
-) = [
-  #block(
-    grid(
-      columns: (left-column-width, middle-column-width, right-column-width),
-      column-gutter: design-entries-horizontal-space-between-columns,
-      align: alignments,
-      ([#set par(spacing: design-text-leading); #left-content]),
-      ([#set par(spacing: design-text-leading); #middle-content]),
-      ([#set par(spacing: design-text-leading); #right-content]),
-    ),
-    breakable: true,
-    width: 100%,
-  )
-]
-
-#let two-col(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  right-content: "",
-  alignments: (auto, auto),
-  column-gutter: design-entries-horizontal-space-between-columns,
-) = [
-  #block(
-    grid(
-      columns: (left-column-width, right-column-width),
-      column-gutter: column-gutter,
-      align: alignments,
-      ([#set par(spacing: design-text-leading); #left-content]),
-      ([#set par(spacing: design-text-leading); #right-content]),
-    ),
-    breakable: true,
-    width: 100%,
-  )
-]
-
-// Main heading settings:
-#let header-font-weight
-#if design-header-name-bold {
-  header-font-weight = 700
-} else {
-  header-font-weight = 400
-}
-#show heading.where(level: 1): it => [
-  #set par(spacing: 0pt)
-  #set align(design-header-alignment)
-  #set text(
-    font: design-header-name-font-family,
-    weight: header-font-weight,
-    size: design-header-name-font-size,
-    fill: design-colors-name,
-  )
-  #it.body
-  // Vertical space after the name
-  #v(design-header-vertical-space-between-name-and-connections)
-]
-
-#let section-title-font-weight
-#if design-section-titles-bold {
-  section-title-font-weight = 700
-} else {
-  section-title-font-weight = 400
-}
-
-#show heading.where(level: 2): it => [
-  #set align(left)
-  #set text(size: (1em / 1.2)) // reset
-  #set text(
-    font: design-section-titles-font-family,
-    size: (design-section-titles-font-size),
-    weight: section-title-font-weight,
-    fill: design-colors-section-titles,
-  )
-  #let section-title = (
-    if design-section-titles-small-caps [
-      #smallcaps(it.body)
-    ] else [
-      #it.body
-    ]
-  )
-  // Vertical space above the section title
-  #v(design-section-titles-vertical-space-above, weak: true)
-  #block(
-    breakable: false,
-    width: 100%,
-    [
-      #if design-section-titles-type == "moderncv" [
-        #two-col(
-          alignments: (right, left),
-          left-column-width: design-entries-date-and-location-width,
-          right-column-width: 1fr,
-          left-content: [
-            #align(horizon, box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles))
-          ],
-          right-content: [
-            #section-title
-          ]
-        )
-
-      ] else [
-        #box(
-          [
-            #section-title
-            #if design-section-titles-type == "with-parial-line" [
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ] else if design-section-titles-type == "with-full-line" [
-
-              #v(design-text-font-size * 0.4)
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ]
-          ]
-        )
-      ]
-     ] + v(1em),
-  )
-  #v(-1em)
-  // Vertical space after the section title
-  #v(design-section-titles-vertical-space-below - 0.5em)
-]
-
-// Links:
-#let original-link = link
-#let link(url, body) = {
-  body = [#if design-links-underline [#underline(body)] else [#body]]
-  body = [#if design-links-use-external-link-icon [#body#h(design-text-font-size/4)#box(
-        fa-icon("external-link", size: 0.7em),
-        baseline: -10%,
-      )] else [#body]]
-  body = [#set text(fill: design-colors-links);#body]
-  original-link(url, body)
-}
-
-// Last updated date text:
-#if design-page-show-last-updated-date {
-  let dx
-  if design-section-titles-type == "moderncv" {
-    dx = 0cm
-  } else {
-    dx = -design-entries-left-and-right-margin
-  }
-  place(
-    top + right,
-    dy: -design-page-top-margin / 2,
-    dx: dx,
-    text(
-      [_#locale-catalog-last-updated-date-style _],
-      fill: design-colors-last-updated-date-and-page-numbering,
-      size: 0.9em,
-    ),
-  )
-}
-
-#let connections(connections-list) = context {
-  set text(fill: design-colors-connections, font: design-header-connections-font-family)
-  set par(leading: design-text-leading*1.7, justify: false)
-  let list-of-connections = ()
-  let separator = (
-    h(design-header-horizontal-space-between-connections / 2, weak: true)
-      + design-header-separator-between-connections
-      + h(design-header-horizontal-space-between-connections / 2, weak: true)
-  )
-  let starting-index = 0
-  while (starting-index < connections-list.len()) {
-    let left-sum-right-margin
-    if type(page.margin) == "dictionary" {
-      left-sum-right-margin = page.margin.left + page.margin.right
-    } else {
-      left-sum-right-margin = page.margin * 4
-    }
-
-    let ending-index = starting-index + 1
-    while (
-      measure(connections-list.slice(starting-index, ending-index).join(separator)).width
-        < page.width - left-sum-right-margin
-    ) {
-      ending-index = ending-index + 1
-      if ending-index > connections-list.len() {
-        break
-      }
-    }
-    if ending-index > connections-list.len() {
-      ending-index = connections-list.len()
-    }
-    list-of-connections.push(connections-list.slice(starting-index, ending-index).join(separator))
-    starting-index = ending-index
-  }
-  align(list-of-connections.join(linebreak()), design-header-alignment)
-  v(design-header-vertical-space-between-connections-and-first-section - design-section-titles-vertical-space-above)
-}
-
-#let three-col-entry(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (left, auto, right),
-) = (
-  if design-section-titles-type == "moderncv" [
-    #three-col(
-      left-column-width: right-column-width,
-      middle-column-width: left-column-width,
-      right-column-width: 1fr,
-      left-content: right-content,
-      middle-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      right-content: middle-content,
-      alignments: (design-text-date-and-location-column-alignment, left, auto),
-    )
-  ] else [
-    #block(
-      [
-        #three-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          middle-content: middle-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
-)
-
-#let two-col-entry(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  right-content: "",
-  alignments: (auto, design-text-date-and-location-column-alignment),
-  column-gutter: design-entries-horizontal-space-between-columns,
-) = (
-  if design-section-titles-type == "moderncv" [
-    #two-col(
-      left-column-width: right-column-width,
-      right-column-width: left-column-width,
-      left-content: right-content,
-      right-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      alignments: (design-text-date-and-location-column-alignment, auto),
-    )
-  ] else [
-    #block(
-      [
-        #two-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
-)
-
-#let one-col-entry(content: "") = [
-  #let left-space = design-entries-left-and-right-margin
-  #if design-section-titles-type == "moderncv" [
-    #(left-space = left-space + design-entries-date-and-location-width + design-entries-horizontal-space-between-columns)
-  ]
-  #block(
-    [#set par(spacing: design-text-leading); #content],
-    breakable: design-entries-allow-page-break-in-entries,
-    inset: (
-      left: left-space,
-      right: design-entries-left-and-right-margin,
-    ),
-    width: 100%,
-  )
-]
-
-  #align(center,
-    [
-        = Tran Minh Duong
-        #set text(
-          font: design-header-subtitle-font-family,
-          size: design-header-subtitle-font-size,
-          weight: design-header-subtitle-font-weight,
-          fill: design-colors-name,
-        )
-        #v(0.1cm)
-        #smallcaps("AI Engineer Intern")
-        #v(design-header-vertical-space-between-name-and-connections - 0.25cm)
-    ]
-  )
-
-// Print connections:
-#let connections-list = (
-  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)Hanoi],
-  [#box(original-link("mailto:minhduongqo@gmail.com")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)minhduongqo\@gmail.com])],
-  [#box(original-link("tel:+84-961-264-447")[#fa-icon("phone", size: 0.9em) #h(0.05cm)0961 264 447])],
-  [#box(original-link("https://linkedin.com/in/tran-minh-duong")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)tran-minh-duong])],
-  [#box(original-link("https://github.com/tmdeptrai")[#fa-icon("github", size: 0.9em) #h(0.05cm)tmdeptrai])],
-)
-#connections(connections-list)
-
 
 
 == About Me
 
+I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.
 
-#one-col-entry(
-  content: [I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.]
-)
-
+Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.
 
 == Education
 
-
-// YES DATE, YES DEGREE
-#three-col-entry(
-  left-column-width: 1cm,
-  left-content: [#strong[BSc]],
-  middle-content: [
+#education-entry(
+  [
     #strong[La Rochelle University], Informatique
-    #v(-design-text-leading)
 
-    #v(design-highlights-top-margin);#highlights([Thesis: Comparative Analysis of LLMs on OCR Post-Correction],)
+    - Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models\"
+
+    - GPA: 17.05\/20 (≈ 3.89\/4)
+
   ],
-  right-content: [
+  [
     La Rochelle, France
 
-Sept 2025 – present
+    Sept 2025 – present
+
+  ],
+  degree-column: [
+    #strong[BSc]
   ],
 )
 
-#v(design-entries-vertical-space-between-entries)
-// YES DATE, YES DEGREE
-#three-col-entry(
-  left-column-width: 1cm,
-  left-content: [#strong[BSc]],
-  middle-content: [
-    #strong[University of Science and Technology of Hanoi], ICT \(Double Degree\)
-    #v(-design-text-leading)
+#education-entry(
+  [
+    #strong[University of Science and Technology of Hanoi], ICT (Double Degree)
 
-    #v(design-highlights-top-margin);#highlights([GPA: 18.48\/20 \(≈ 3.89\/4\), ranked #link("https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing")[1st in double degree cohort]],[Awarded 100\% Merit Scholarship for 2 consecutive years],)
+    - GPA: 18.48\/20 (≈ 3.89\/4), ranked #link("https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing")[1st in double degree cohort]
+
+    - Awarded 100\% Merit Scholarship for 2 consecutive years
+
   ],
-  right-content: [
+  [
     Hanoi, Vietnam
 
-Sept 2023 – July 2025
+    Sept 2023 – July 2025
+
+  ],
+  degree-column: [
+    #strong[BSc]
   ],
 )
 
+== Skills
 
+#strong[Programming Languages:] Python (proficient), Java, C++, Bash, SQL
+
+#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases
+
+#strong[Databases:] PostgreSQL, Supabase, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
+
+#strong[Tools & DevOps:] AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana
+
+#strong[Foreign Languages:] English C1 (IELTS 7.5), French B2 (DELF B2)
 
 == Experience
 
+#regular-entry(
+  [
+    #strong[FPT Software Innovation], Junior AI Engineer
 
-#two-col-entry(
-  left-content: [
-    #strong[ICTLab - USTH], AI Research Assistant
-    #v(-design-text-leading)
+    #summary[Design and deliver scalable AI-powered solutions for enterprise clients, focusing on LLM integrations and MLOps practices.]
 
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Contributed to research on #strong[context-aware fire detection] using Visual Language Models])], column-gutter: 0cm)
+    - Develop and deploy custom Retrieval-Augmented Generation (RAG) and NLP pipelines to automate document processing and enhance enterprise search capabilities
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs],[Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency],[Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]],)
+    - Collaborate with cross-functional teams to integrate machine learning models into production cloud environments, ensuring high reliability and low latency
+
+    - Optimize model inference and perform comprehensive evaluations using modern MLOps tools to prevent regression in production deployments
+
   ],
-  right-content: [
+  [
     Hanoi, Vietnam
 
-Aug 2024 – Aug 2025
+    June 2026 – present
+
   ],
 )
 
+#regular-entry(
+  [
+    #strong[L3i - La Rochelle Université], AI Researcher
+
+    #summary[Conducted research on OCR Post-Correction for historical documents using modern LLMs.]
+
+    - Researched modern LLM applications for historical document OCR post-correction
+
+    - Optimized Qwen3 and BART via PEFT\/QLoRA, decreasing OCR error rates by 50\%
+
+    - Analyzed metadata-aware vs. metadata-free prompt performance and assisted in writing the methodology for an academic conference paper
+
+  ],
+  [
+    La Rochelle, France
+
+    Mar 2026 – June 2026
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[ICTLab - USTH], AI Research Assistant
+
+    #summary[Contributed to research on #strong[context-aware fire detection] using Visual Language Models]
+
+    - Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs
+
+    - Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency
+
+    - Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]
+
+  ],
+  [
+    Hanoi, Vietnam
+
+    Sept 2024 – Aug 2025
+
+  ],
+)
+
+== Projects
+
+#strong[#link("https://github.com/tmdeptrai/rag-on-aws")[RAG on AWS]]
+
+End-to-End serverless hybrid RAG (Vector + Knowledge Graph) on AWS, entirely provisioned via Terraform
+- Architected event-driven ingestion pipeline (Lambda\/S3) achieving minimal cost (#strong[\<\$1\/mo])
+- Automated tests in CI\/CD using DeepEval (LLM-as-a-Judge) to prevent accuracy regression
+- #strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker
+
+
+#strong[#link("https://github.com/tmdeptrai/LegalContractAnalyzer")[Legal Contract Analyzer]]
+
+RAG Chatbot for understanding and extracting key information from legal documents
+- Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring
+- Optimized retrieval via semantic search (vLLM + ChromaDB), achieving sub-200ms latency
+- #strong[Techstack]: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana
 
 
 == Publications
 
-
-#two-col-entry(
-  left-content: [
+#regular-entry(
+  [
     #strong[Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study]
 
+    Anh Tuan Giang, Nhat Quang Doan, #strong[Minh Duong Tran], et al.
+
+    #link("https://doi.org/https://doi.org/10.1038/s41598-026-48743-5")[https:\/\/doi.org\/10.1038\/s41598-026-48743-5] (Scientific Reports \[Q1 Journal\])
+
   ],
-  right-content: [
+  [
     Apr 2026
+
   ],
 )
-#one-col-entry(content:[
-#v(design-highlights-top-margin);Anh Tuan Giang, Nhat Quang Doan, #strong[Minh Duong Tran], et al.
-
-#v(design-highlights-top-margin - design-text-leading)#link("https://doi.org/https://doi.org/10.1038/s41598-026-48743-5")[https://doi.org/10.1038/s41598-026-48743-5] (Scientific Reports \(Nature Portfolio\)\[Q1 Journal\])])
-
-
-
-== Projects
-
-
-
-#one-col-entry(
-  content: [
-    #link("https://github.com/tmdeptrai/rag-on-aws")[#strong[RAG on AWS]]
-
-    #v(-design-text-leading)
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [End-to-End serverless hybrid RAG \(Vector + Knowledge Graph\) on AWS, entirely provisioned via Terraform])], column-gutter: 0cm)
-
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Architected event-driven ingestion pipeline \(Lambda\/S3\) achieving minimal cost \(#strong[<\$1\/mo]\)],[Automated tests in CI\/CD using DeepEval \(LLM-as-a-Judge\) to prevent accuracy regression],[#strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker],)
-  ],
-)
-
-#v(design-entries-vertical-space-between-entries)
-
-#one-col-entry(
-  content: [
-    #link("https://github.com/tmdeptrai/LegalContractAnalyzer")[#strong[Legal Contract Analyzer]]
-
-    #v(-design-text-leading)
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [RAG Chatbot for understanding and extracting key information from legal documents])], column-gutter: 0cm)
-
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring],[Optimized retrieval via semantic search \(vLLM + ChromaDB\), achieving sub-200ms latency],[#strong[Techstack]: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana],)
-  ],
-)
-
-
-
-== Skills
-
-
-#one-col-entry(
-  content: [#strong[Programming Languages:] Python \(proficient\), Java, C++, Bash, SQL]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Databases:] PostgreSQL, Supabase, MongoDB, Neo4j \(Graph\), Pinecone \(Vector\), ChromaDB]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Tools & DevOps:] AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Foreign Languages:] English C1 \(IELTS 7.5\), French B2 \(DELF B2\)]
-)
-
 
 == Certifications
 
+#regular-entry(
+  [
+    #strong[#link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[AWS Certified Solution Architect Associate (AWS-SAA-C03)]]
 
-
-#one-col-entry(
-  content: [
-    #link("https://www.credly.com/badges/cf63f3c0-9e57-44f3-8dd0-ab14b22f1624/public_url")[#strong[AWS Certified Solution Architect Associate \(AWS-SAA-C03\)]]
-
-    
+  ],
+  [
   ],
 )
-
-
-

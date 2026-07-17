@@ -1,6 +1,6 @@
 cv:
   name: Tran Minh Duong
-  subtitle: AI Engineer Intern
+  headline: Junior AI Engineer
   # photo: profile_picture.jpg
   location: Hanoi
   email: minhduongqo@gmail.com
@@ -26,7 +26,8 @@ cv:
         location: La Rochelle, France
         summary:
         highlights:
-          - "Thesis: Comparative Analysis of LLMs on OCR Post-Correction"
+          - "Thesis: Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models"
+          - "GPA: 17.05/20 (≈ 3.89/4)"
 
       - institution: University of Science and Technology of Hanoi
         area: ICT (Double Degree)

@@ -64,27 +64,51 @@
         <!-- In the Media Section -->
         <section id="media">
             <h2 class="section-title">In the Media</h2>
-            <div class="media-grid">
-                <a href="https://svvn.tienphong.vn/cong-bo-quoc-te-tren-tap-chi-q1-voi-mo-hinh-ai-biet-suy-luan-cua-nam-sinh-usth-post1836158.tpo" target="_blank" class="media-card">
-                    <div class="media-img-placeholder">
-                        <img src="images/media1.png" alt="Media 1">
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <button class="carousel-control prev" id="mediaPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track" id="mediaTrack">
+                            <li class="carousel-slide">
+                                <a href="https://www.facebook.com/photo/?fbid=1069812152258421&set=pcb.1069812505591719" target="_blank" class="media-card">
+                                    <div class="media-img-placeholder">
+                                        <img src="images/media3.jpeg" alt="Media 3">
+                                    </div>
+                                    <div class="media-info">
+                                        <span class="media-source">USTH News</span>
+                                        <h3 class="media-headline">Gương mặt thủ khoa USTH</h3>
+                                        <p class="media-summary">Tran Minh Duong is honored as the Valedictorian Graduate of the Bachelor program in Information and Communication Technology (Double Degree)</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="carousel-slide">
+                                <a href="https://svvn.tienphong.vn/cong-bo-quoc-te-tren-tap-chi-q1-voi-mo-hinh-ai-biet-suy-luan-cua-nam-sinh-usth-post1836158.tpo" target="_blank" class="media-card">
+                                    <div class="media-img-placeholder">
+                                        <img src="images/media1.png" alt="Media 1">
+                                    </div>
+                                    <div class="media-info">
+                                        <span class="media-source">SVVN - Tien Phong</span>
+                                        <h3 class="media-headline">Công bố quốc tế trên tạp chí Q1 với mô hình AI ‘biết suy luận’ của nam sinh USTH</h3>
+                                        <p class="media-summary">Tran Minh Duong co-authored a research paper published in Scientific Reports (Nature Portfolio). His research focuses on optimizing VLMs to distinguish dangerous fires from safe heat sources.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="carousel-slide">
+                                <a href="https://usth.edu.vn/review-trai-nghiem-tai-phap-cua-nam-sinh-chuong-trinh-song-bang-nganh-cong-nghe-thong-tin-truyen-thong-30987/" target="_blank" class="media-card">
+                                    <div class="media-img-placeholder">
+                                        <img src="images/media2.png" alt="Media 2">
+                                    </div>
+                                    <div class="media-info">
+                                        <span class="media-source">USTH News</span>
+                                        <h3 class="media-headline">Review trải nghiệm tại Pháp của nam sinh chương trình song bằng ngành CNTT-TT</h3>
+                                        <p class="media-summary">Sharing experiences at La Rochelle University, France, covering academic transition, research internship on LLMs at L3i laboratory, and life in France.</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="media-info">
-                        <span class="media-source">SVVN - Tien Phong</span>
-                        <h3 class="media-headline">Công bố quốc tế trên tạp chí Q1 với mô hình AI ‘biết suy luận’ của nam sinh USTH</h3>
-                        <p class="media-summary">Tran Minh Duong co-authored a research paper published in Scientific Reports (Nature Portfolio). His research focuses on optimizing VLMs to distinguish dangerous fires from safe heat sources.</p>
-                    </div>
-                </a>
-                <a href="https://usth.edu.vn/review-trai-nghiem-tai-phap-cua-nam-sinh-chuong-trinh-song-bang-nganh-cong-nghe-thong-tin-truyen-thong-30987/" target="_blank" class="media-card">
-                    <div class="media-img-placeholder">
-                        <img src="images/media2.png" alt="Media 2">
-                    </div>
-                    <div class="media-info">
-                        <span class="media-source">USTH News</span>
-                        <h3 class="media-headline">Review trải nghiệm tại Pháp của nam sinh chương trình song bằng ngành CNTT-TT</h3>
-                        <p class="media-summary">Sharing experiences at La Rochelle University, France, covering academic transition, research internship on LLMs at L3i laboratory, and life in France.</p>
-                    </div>
-                </a>
+                    <button class="carousel-control next" id="mediaNextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         </section>
 
@@ -124,6 +148,11 @@
                         </div>
                         <div class="exp-date">Jun 2026 - Now</div>
                     </div>
+                    <ul class="exp-highlights">
+                        <li>Develop and deploy custom Retrieval-Augmented Generation (RAG) and NLP pipelines to automate document processing and enhance enterprise search capabilities</li>
+                        <li>Collaborate with cross-functional teams to integrate machine learning models into production cloud environments, ensuring high reliability and low latency</li>
+                        <li>Optimize model inference and perform comprehensive evaluations using modern MLOps tools to prevent regression in production deployments</li>
+                    </ul>
                 </div>
 
                 <div class="exp-item">

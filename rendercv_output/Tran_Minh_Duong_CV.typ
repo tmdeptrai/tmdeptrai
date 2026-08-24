@@ -6,7 +6,7 @@
   name: "Tran Minh Duong",
   title: "Tran Minh Duong - CV",
   footer: context { [#emph[Tran Minh Duong -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in July 2026] ],
+  top-note: [ #emph[Last updated in Aug 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "a4",
@@ -80,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 7,
-    day: 17,
+    month: 8,
+    day: 24,
   ),
 )
 

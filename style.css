@@ -479,6 +479,11 @@ section {
     min-width: calc(25% - 11.25px);
 }
 
+#mediaTrack .carousel-slide {
+    flex: 0 0 calc(50% - 7.5px); /* 2 items with 15px gap */
+    min-width: calc(50% - 7.5px);
+}
+
 .slide-content {
     display: flex;
     flex-direction: column;
@@ -645,6 +650,11 @@ footer {
     .carousel-slide {
         flex: 0 0 calc(50% - 7.5px); /* 2 items with 15px gap */
         min-width: calc(50% - 7.5px);
+    }
+
+    #mediaTrack .carousel-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
     }
 
     .carousel-control.prev {

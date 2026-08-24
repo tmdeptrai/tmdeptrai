@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Reusable Carousel Logic
-    const initCarousel = (trackId, nextBtnId, prevBtnId) => {
+    const initCarousel = (trackId, nextBtnId, prevBtnId, autoPlay = true) => {
         const track = document.getElementById(trackId);
         if (!track || track.children.length === 0) return;
 
@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const startAutoPlay = () => {
-            autoPlayInterval = setInterval(moveToNextSlide, 2000);
+            if (autoPlay) autoPlayInterval = setInterval(moveToNextSlide, 2000);
         };
 
         const stopAutoPlay = () => {
-            clearInterval(autoPlayInterval);
+            if (autoPlay) clearInterval(autoPlayInterval);
         };
 
         if (nextButton) {
@@ -144,17 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        startAutoPlay();
-        track.addEventListener('mouseenter', stopAutoPlay);
-        track.addEventListener('mouseleave', startAutoPlay);
+        if (autoPlay) {
+            startAutoPlay();
+            track.addEventListener('mouseenter', stopAutoPlay);
+            track.addEventListener('mouseleave', startAutoPlay);
+        }
         window.addEventListener('resize', () => updateCarousel(false));
         
         return { track }; // Return for animation observation
     };
 
-    // Initialize both carousels
+    // Initialize carousels
     initCarousel('carouselTrack', 'nextBtn', 'prevBtn');
     initCarousel('friendTrack', 'friendNextBtn', 'friendPrevBtn');
+    initCarousel('mediaTrack', 'mediaNextBtn', 'mediaPrevBtn', false);
 
     // Apply animation to sections and cards
     const animatedElements = document.querySelectorAll('section, .media-card, .project-card, .edu-item, .exp-item, .pub-card, .carousel-wrapper, .cv-container');

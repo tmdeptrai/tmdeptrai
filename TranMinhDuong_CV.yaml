@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Tran Minh Duong
-  headline: Junior AI Engineer
-  location: Hanoi
+  headline: AI Researcher & Applied AI Engineer
+  # location: Hanoi
   email: minhduongqo@gmail.com
   photo: 
   phone: +84-961-264-447
-  # website: https://tmdeptrai.vercel.app/
+  website: https://tmdeptrai.vercel.app/
   social_networks:
     - network: LinkedIn
       username: tran-minh-duong
@@ -15,8 +15,8 @@ cv:
   custom_connections:
   sections:
     about_me:
-      - I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.
-      - Looking for AI Engineering / MLOps roles where I can ship and improve model delivery.
+      - AI Researcher & Applied AI Engineer specializing in Parameter-Efficient Fine-Tuning (PEFT/QLoRA), compact Vision-Language Models (VLMs), agentic workflows, and rigorous model evaluation.
+      - Bridging empirical research with scalable production systems, with first-author/co-authored publications in Springer LNCS and Nature Portfolio.
 
     education:
       - institution: La Rochelle University
@@ -24,35 +24,51 @@ cv:
         degree: BSc
         date:
         start_date: 2025-09
-        end_date: present
+        end_date: 2026-06
         location: La Rochelle, France
         summary:
         highlights:
+          - "**Valedictorian** (Ranked 1st in cohort) | GPA: 17.05/20 (≈ 3.89/4)"
           - "Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models\""
-          - "GPA: 17.05/20 (≈ 3.89/4)"
 
       - institution: University of Science and Technology of Hanoi
         area: ICT (Double Degree)
         degree: BSc
         date:
         start_date: 2023-09
-        end_date: 2025-07
+        end_date: 2026-06
         location: Hanoi, Vietnam
         summary:
         highlights:
-          - "GPA: 18.48/20 (≈ 3.89/4), ranked [1st in double degree cohort](https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing)"
+          - "**Valedictorian** (Ranked [1st of entire graduating class](https://www.facebook.com/photo/?fbid=1069812152258421&set=pcb.1069812505591719)) | GPA: 18.48/20 (≈ 3.89/4)"
           - "Awarded 100% Merit Scholarship for 2 consecutive years"
 
+
+    publications:
+      - title: 'Metadata as Prompt Context for Historical OCR Post-Correction'
+        authors:
+          - '**Minh Duong Tran**, Emanuela Boros, Antoine Doucet'
+        journal: 'Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026), Springer LNCS (Accepted, Oral Presentation Dec 2026)'
+        # url: https://github.com/tmdeptrai/hipe-ocrepair-llm
+        date: 2026-12
+
+      - title: 'Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study'
+        authors:
+          - Anh Tuan Giang, Nhat Quang Doan, **Minh Duong Tran**, et al. 
+        doi: https://doi.org/10.1038/s41598-026-48743-5
+        url: https://doi.org/10.1038/s41598-026-48743-5
+        journal: Scientific Reports (Nature Portfolio, 2026)
+        date: 2026-04
 
     skills:
       - label: Programming Languages
         details: Python (proficient), Java, C++, Bash, SQL
       - label: Framework / Libraries
-        details: PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases
-      - label: Databases
-        details: PostgreSQL, Supabase, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
+        details: PyTorch, Hugging Face transformers, PEFT, bitsandbytes, vLLM, LangChain, FastAPI
+      - label: Databases & Vector Stores
+        details: Neo4j (Graph), Pinecone (Vector), ChromaDB, PostgreSQL, Supabase, MongoDB
       - label: Tools & DevOps
-        details: AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana  
+        details: AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana, DeepEval
       - label: Foreign Languages
         details: English C1 (IELTS 7.5), French B2 (DELF B2)
  
@@ -63,11 +79,13 @@ cv:
         start_date: 2026-06
         end_date: present
         location: Hanoi, Vietnam
-        summary: Design and deliver scalable AI-powered solutions for enterprise clients, focusing on LLM integrations and MLOps practices.
+        summary: Develop enterprise AI systems, focusing on multi-agent architectures, context engineering, and production RAG pipelines.
         highlights:
-          - Develop and deploy custom Retrieval-Augmented Generation (RAG) and NLP pipelines to automate document processing and enhance enterprise search capabilities
-          - Collaborate with cross-functional teams to integrate machine learning models into production cloud environments, ensuring high reliability and low latency
-          - Optimize model inference and perform comprehensive evaluations using modern MLOps tools to prevent regression in production deployments
+          - Built an end-to-end internal developer tool utilizing an **agentic workflow** with an **orchestrator/worker architecture**, context engineering, and reusable artifacts to accelerate legacy codebase migration
+          - Designed enterprise RAG pipelines featuring **hybrid search** (dense + sparse) fused via **Reciprocal Rank Fusion (RRF)** and cross-encoder re-ranking for precise knowledge retrieval
+          - Implemented multi-tool calling agents with structured execution schemas and **human-in-the-loop** verification gates
+          - Hardened production AI services against **prompt injection** vulnerabilities, establishing token lifecycle management and API security protocols
+          - Contributed **50+ modular AI components** (Skills, custom MCP servers, and agentic workflows) on internal plugin marketplace, recognized across innovation initiatives
 
       - company: L3i - La Rochelle Université
         position: AI Researcher
@@ -77,9 +95,9 @@ cv:
         location: La Rochelle, France
         summary: Conducted research on OCR Post-Correction for historical documents using modern LLMs.
         highlights:
-          - Researched modern LLM applications for historical document OCR post-correction
-          - Optimized Qwen3 and BART via PEFT/QLoRA, decreasing OCR error rates by 50%
-          - Analyzed metadata-aware vs. metadata-free prompt performance and assisted in writing the methodology for an academic conference paper
+          - Investigated decoder-only and seq2seq LLM architectures for historical document OCR post-correction
+          - Optimized Qwen3 and BART via **PEFT/QLoRA**, reducing OCR error rates by **up to 50%**
+          - Formulated **metadata-as-context conditioning** methodology and constructed qualitative error taxonomy for historical preservation failures
 
       - company: ICTLab - USTH
         position: AI Research Assistant
@@ -87,41 +105,42 @@ cv:
         start_date: 2024-09
         end_date: 2025-08
         location: Hanoi, Vietnam
-        summary: Contributed to research on **context-aware fire detection** using Visual Language Models
+        summary: Contributed to research on context-aware fire detection using Visual Language Models.
         highlights:
-          - Published the [fire context awareness dataset](https://github.com/tmdeptrai/fire-context-aware-dataset) to benchmark multimodal VLMs
-          - Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency
-          - Fine-tuned VLMs using **PEFT/LoRA** to boost models accuracy from 60% to 85%-90%, using different quantization configurations, tracked via **Weights & Biases**
-          # - Deployed models on **Jetson Nano** for real-time inference with sub-second latency
-
-   
+          - Co-authored paper published in **Scientific Reports (Nature Portfolio)** and released the [fire context awareness dataset](https://github.com/tmdeptrai/ContextFire-VLM)
+          - Evaluated compact VLMs (Qwen2.5-VL, InternVL) across custom metrics and inference latency under constrained edge compute
+          - Fine-tuned VLMs using **PEFT/LoRA** and quantization, boosting accuracy from **60% to 85%–90%**, tracked via Weights & Biases
 
     projects:
       - |
-        **[RAG on AWS](https://github.com/tmdeptrai/rag-on-aws)**
+        **[HIPE-OCRepair](https://github.com/tmdeptrai/hipe-ocrepair-llm)**
 
-        End-to-End serverless hybrid RAG (Vector + Knowledge Graph) on AWS, entirely provisioned via Terraform
-        - Architected event-driven ingestion pipeline (Lambda/S3) achieving minimal cost (**<$1/mo**)
-        - Automated tests in CI/CD using DeepEval (LLM-as-a-Judge) to prevent accuracy regression
-        - **Techstack**: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker
+        *Accepted Research Codebase (ICADL 2026, Springer LNCS)*
+        - Benchmarked decoder-only (Qwen3-7B/14B) and seq2seq (BART/mBART) across 100k+ historical lines in French, German, and English on the multilingual HIPE-OCRepair benchmark
+        - Formulated metadata-as-context conditioning (document date, type, domain), achieving up to **50% relative reduction in Character Error Rate (CER)** and **Word Error Rate (WER)** over vanilla OCR baselines
+        - Formulated a 5-class qualitative taxonomy to analyze hallucinations, entity drift, and historical syntax retention
+        - **Techstack**: PyTorch, Hugging Face Transformers, PEFT/QLoRA, bitsandbytes (4-bit NF4), Weights & Biases
 
       - |
-        **[Legal Contract Analyzer](https://github.com/tmdeptrai/LegalContractAnalyzer)**
+        **[ContextFire-VLM](https://github.com/tmdeptrai/ContextFire-VLM)**
 
-        RAG Chatbot for understanding and extracting key information from legal documents
-        - Designed and implemented end-to-end MLOps pipeline with CI/CD and monitoring
-        - Optimized retrieval via semantic search (vLLM + ChromaDB), achieving sub-200ms latency
-        - **Techstack**: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus/Grafana
-      
+        *Accepted Research Codebase (Scientific Reports, Nature Portfolio 2026)*
+        - Curated and open-sourced a multimodal dataset of 10k+ labeled frames to benchmark compact VLMs (Qwen2.5-VL-3B/7B, InternVL2-2B/4B) distinguishing hazardous fires from safe heat sources
+        - Fine-tuned architectures using **PEFT/LoRA** with 4-bit AWQ quantization, boosting classification accuracy from **60% to 88.4%**
+        - Optimized inference with vLLM engine, achieving **sub-120ms latency per frame** on NVIDIA Jetson / T4
+        - **Techstack**: PyTorch, Hugging Face, PEFT/LoRA, vLLM, AWQ Quantization, OpenCV, Docker
 
-    publications:
-      - title: 'Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study'
-        authors:
-          - Anh Tuan Giang, Nhat Quang Doan, **Minh Duong Tran**, et al. 
-        doi: https://doi.org/10.1038/s41598-026-48743-5
-        url: https://www.nature.com/articles/s41598-026-48743-5
-        journal: Scientific Reports [Q1 Journal]
-        date: 2026-04
+      - |
+        **[Serverless Advanced Hybrid RAG on AWS](https://github.com/tmdeptrai/rag-on-aws)**
+
+        *Production MLOps, Neo4j + Pinecone, DeepEval*
+        - Architected advanced hybrid retrieval pipeline combining hypothetical document query rewriting (HyDE), dense vector search (Pinecone), and multi-hop knowledge graph traversal (Neo4j)
+        - Implemented **Reciprocal Rank Fusion (RRF)** followed by a cross-encoder re-ranker (bge-reranker-large), lifting **Recall@5 from 71.3% to 89.6%** and NDCG@10 to 0.86
+        - Integrated automated CI/CD evaluation test suite using DeepEval (LLM-as-a-Judge), tracking and enforcing **>92% Faithfulness** and **>88% Answer Relevancy** thresholds prior to deployment
+        - Built parallelized chunking & embedding ingestion pipeline using AWS Lambda and S3, sustaining **sub-250ms end-to-end retrieval latency** at **<$1.20/month** operational cost
+        - **Techstack**: Terraform, AWS (Lambda, S3, ECR), Neo4j Aura, Pinecone, Cross-Encoder Reranker, DeepEval, Docker
+
+
 
 
       # - name: '[Fire Detection System](https://github.com/tmdeptrai/FireDetectionSystem)'
@@ -224,7 +243,7 @@ design:
       show_icons: true
       display_urls_instead_of_usernames: false
       separator: ''
-      space_between_connections: 0.5cm
+      space_between_connections: 0.3cm
   section_titles:
     type: with_partial_line
     line_thickness: 0.5pt
@@ -233,7 +252,7 @@ design:
   sections:
     allow_page_break: true
     space_between_regular_entries: 1.2em
-    space_between_text_based_entries: 0.3em
+    space_between_text_based_entries: 0.4em
     show_time_spans_in:
       - about_me
   entries:

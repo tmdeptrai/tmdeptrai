@@ -6,7 +6,7 @@
   name: "Tran Minh Duong",
   title: "Tran Minh Duong - CV",
   footer: context { [#emph[Tran Minh Duong -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in Aug 2026] ],
+  top-note: [ #emph[Last updated in Sept 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "a4",
@@ -56,13 +56,13 @@
   header-connections-show-icons: true,
   header-connections-display-urls-instead-of-usernames: false,
   header-connections-separator: "",
-  header-connections-space-between-connections: 0.5cm,
+  header-connections-space-between-connections: 0.3cm,
   section-titles-type: "with_partial_line",
   section-titles-line-thickness: 0.5pt,
   section-titles-space-above: 0.5cm,
   section-titles-space-below: 0.3cm,
   sections-allow-page-break: true,
-  sections-space-between-text-based-entries: 0.3em,
+  sections-space-between-text-based-entries: 0.4em,
   sections-space-between-regular-entries: 1.2em,
   entries-date-and-location-width: 3.4cm,
   entries-side-space: 0cm,
@@ -80,20 +80,20 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 8,
-    day: 24,
+    month: 9,
+    day: 15,
   ),
 )
 
 
 = Tran Minh Duong
 
-  #headline([Junior AI Engineer])
+  #headline([AI Researcher & Applied AI Engineer])
 
 #connections(
-  [#connection-with-icon("location-dot")[Hanoi]],
   [#link("mailto:minhduongqo@gmail.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[minhduongqo\@gmail.com]]],
   [#link("tel:+84-961-264-447", icon: false, if-underline: false, if-color: false)[#connection-with-icon("phone")[0961 264 447]]],
+  [#link("https://tmdeptrai.vercel.app/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[tmdeptrai.vercel.app]]],
   [#link("https://linkedin.com/in/tran-minh-duong", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[tran-minh-duong]]],
   [#link("https://github.com/tmdeptrai", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[tmdeptrai]]],
 )
@@ -101,9 +101,9 @@
 
 == About Me
 
-I design, train, and deploy ML systems with a focus on reliability, monitoring, and real-world constraints. Experienced in RAG pipelines, LLM fine-tuning, model evaluation, containerized inference and cloud deployment.
+AI Researcher & Applied AI Engineer specializing in Parameter-Efficient Fine-Tuning (PEFT\/QLoRA), compact Vision-Language Models (VLMs), agentic workflows, and rigorous model evaluation.
 
-Looking for AI Engineering \/ MLOps roles where I can ship and improve model delivery.
+Bridging empirical research with scalable production systems, with first-author\/co-authored publications in Springer LNCS and Nature Portfolio.
 
 == Education
 
@@ -111,15 +111,15 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   [
     #strong[La Rochelle University], Informatique
 
-    - Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models\"
+    - #strong[Valedictorian] (Ranked 1st in cohort) | GPA: 17.05\/20 (≈ 3.89\/4)
 
-    - GPA: 17.05\/20 (≈ 3.89\/4)
+    - Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models\"
 
   ],
   [
     La Rochelle, France
 
-    Sept 2025 – present
+    Sept 2025 – June 2026
 
   ],
   degree-column: [
@@ -131,7 +131,7 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   [
     #strong[University of Science and Technology of Hanoi], ICT (Double Degree)
 
-    - GPA: 18.48\/20 (≈ 3.89\/4), ranked #link("https://drive.google.com/file/d/1kWYPk2qsGVru7mYXUAo-kgwfMk-2M1u0/view?usp=sharing")[1st in double degree cohort]
+    - #strong[Valedictorian] (Ranked #link("https://www.facebook.com/photo/?fbid=1069812152258421&set=pcb.1069812505591719")[1st of entire graduating class]) | GPA: 18.48\/20 (≈ 3.89\/4)
 
     - Awarded 100\% Merit Scholarship for 2 consecutive years
 
@@ -139,7 +139,7 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   [
     Hanoi, Vietnam
 
-    Sept 2023 – July 2025
+    Sept 2023 – June 2026
 
   ],
   degree-column: [
@@ -147,15 +147,47 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   ],
 )
 
+== Publications
+
+#regular-entry(
+  [
+    #strong[Metadata as Prompt Context for Historical OCR Post-Correction]
+
+    #strong[Minh Duong Tran], Emanuela Boros, Antoine Doucet
+
+    (Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026), Springer LNCS (Accepted, Oral Presentation Dec 2026))
+
+  ],
+  [
+    Dec 2026
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study]
+
+    Anh Tuan Giang, Nhat Quang Doan, #strong[Minh Duong Tran], et al.
+
+    #link("https://doi.org/https://doi.org/10.1038/s41598-026-48743-5")[https:\/\/doi.org\/10.1038\/s41598-026-48743-5] (Scientific Reports (Nature Portfolio, 2026))
+
+  ],
+  [
+    Apr 2026
+
+  ],
+)
+
 == Skills
 
 #strong[Programming Languages:] Python (proficient), Java, C++, Bash, SQL
 
-#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, Langchain, FastAPI, PyTest, Weights & Biases
+#strong[Framework \/ Libraries:] PyTorch, Hugging Face transformers, PEFT, bitsandbytes, vLLM, LangChain, FastAPI
 
-#strong[Databases:] PostgreSQL, Supabase, MongoDB, Neo4j (Graph), Pinecone (Vector), ChromaDB
+#strong[Databases & Vector Stores:] Neo4j (Graph), Pinecone (Vector), ChromaDB, PostgreSQL, Supabase, MongoDB
 
-#strong[Tools & DevOps:] AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana
+#strong[Tools & DevOps:] AWS, Docker, Terraform, Git, GitHub Actions, Prometheus, Grafana, DeepEval
 
 #strong[Foreign Languages:] English C1 (IELTS 7.5), French B2 (DELF B2)
 
@@ -165,13 +197,17 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   [
     #strong[FPT Software Innovation], Junior AI Engineer
 
-    #summary[Design and deliver scalable AI-powered solutions for enterprise clients, focusing on LLM integrations and MLOps practices.]
+    #summary[Develop enterprise AI systems, focusing on multi-agent architectures, context engineering, and production RAG pipelines.]
 
-    - Develop and deploy custom Retrieval-Augmented Generation (RAG) and NLP pipelines to automate document processing and enhance enterprise search capabilities
+    - Built an end-to-end internal developer tool utilizing an #strong[agentic workflow] with an #strong[orchestrator\/worker architecture], context engineering, and reusable artifacts to accelerate legacy codebase migration
 
-    - Collaborate with cross-functional teams to integrate machine learning models into production cloud environments, ensuring high reliability and low latency
+    - Designed enterprise RAG pipelines featuring #strong[hybrid search] (dense + sparse) fused via #strong[Reciprocal Rank Fusion (RRF)] and cross-encoder re-ranking for precise knowledge retrieval
 
-    - Optimize model inference and perform comprehensive evaluations using modern MLOps tools to prevent regression in production deployments
+    - Implemented multi-tool calling agents with structured execution schemas and #strong[human-in-the-loop] verification gates
+
+    - Hardened production AI services against #strong[prompt injection] vulnerabilities, establishing token lifecycle management and API security protocols
+
+    - Contributed #strong[50+ modular AI components] (Skills, custom MCP servers, and agentic workflows) on internal plugin marketplace, recognized across innovation initiatives
 
   ],
   [
@@ -188,11 +224,11 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
 
     #summary[Conducted research on OCR Post-Correction for historical documents using modern LLMs.]
 
-    - Researched modern LLM applications for historical document OCR post-correction
+    - Investigated decoder-only and seq2seq LLM architectures for historical document OCR post-correction
 
-    - Optimized Qwen3 and BART via PEFT\/QLoRA, decreasing OCR error rates by 50\%
+    - Optimized Qwen3 and BART via #strong[PEFT\/QLoRA], reducing OCR error rates by #strong[up to 50\%]
 
-    - Analyzed metadata-aware vs. metadata-free prompt performance and assisted in writing the methodology for an academic conference paper
+    - Formulated #strong[metadata-as-context conditioning] methodology and constructed qualitative error taxonomy for historical preservation failures
 
   ],
   [
@@ -207,13 +243,13 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
   [
     #strong[ICTLab - USTH], AI Research Assistant
 
-    #summary[Contributed to research on #strong[context-aware fire detection] using Visual Language Models]
+    #summary[Contributed to research on context-aware fire detection using Visual Language Models.]
 
-    - Published the #link("https://github.com/tmdeptrai/fire-context-aware-dataset")[fire context awareness dataset] to benchmark multimodal VLMs
+    - Co-authored paper published in #strong[Scientific Reports (Nature Portfolio)] and released the #link("https://github.com/tmdeptrai/ContextFire-VLM")[fire context awareness dataset]
 
-    - Evaluated Qwen2.5VL, InternVL3 and other state-of-the-art models by implementing pipelines to compare various metrics and inference latency
+    - Evaluated compact VLMs (Qwen2.5-VL, InternVL) across custom metrics and inference latency under constrained edge compute
 
-    - Fine-tuned VLMs using #strong[PEFT\/LoRA] to boost models accuracy from 60\% to 85\%-90\%, using different quantization configurations, tracked via #strong[Weights & Biases]
+    - Fine-tuned VLMs using #strong[PEFT\/LoRA] and quantization, boosting accuracy from #strong[60\% to 85\%–90\%], tracked via Weights & Biases
 
   ],
   [
@@ -226,38 +262,33 @@ Looking for AI Engineering \/ MLOps roles where I can ship and improve model del
 
 == Projects
 
-#strong[#link("https://github.com/tmdeptrai/rag-on-aws")[RAG on AWS]]
+#strong[#link("https://github.com/tmdeptrai/hipe-ocrepair-llm")[HIPE-OCRepair]]
 
-End-to-End serverless hybrid RAG (Vector + Knowledge Graph) on AWS, entirely provisioned via Terraform
-- Architected event-driven ingestion pipeline (Lambda\/S3) achieving minimal cost (#strong[\<\$1\/mo])
-- Automated tests in CI\/CD using DeepEval (LLM-as-a-Judge) to prevent accuracy regression
-- #strong[Techstack]: Terraform, Amazon Cognito, Lambda, S3, ECR, Pinecone, Neo4j, DeepEval, Docker
-
-
-#strong[#link("https://github.com/tmdeptrai/LegalContractAnalyzer")[Legal Contract Analyzer]]
-
-RAG Chatbot for understanding and extracting key information from legal documents
-- Designed and implemented end-to-end MLOps pipeline with CI\/CD and monitoring
-- Optimized retrieval via semantic search (vLLM + ChromaDB), achieving sub-200ms latency
-- #strong[Techstack]: GitHub Actions, FastAPI, vLLM, ChromaDB, Docker, Prometheus\/Grafana
+#emph[Accepted Research Codebase (ICADL 2026, Springer LNCS)]
+- Benchmarked decoder-only (Qwen3-7B\/14B) and seq2seq (BART\/mBART) across 100k+ historical lines in French, German, and English on the multilingual HIPE-OCRepair benchmark
+- Formulated metadata-as-context conditioning (document date, type, domain), achieving up to #strong[50\% relative reduction in Character Error Rate (CER)] and #strong[Word Error Rate (WER)] over vanilla OCR baselines
+- Formulated a 5-class qualitative taxonomy to analyze hallucinations, entity drift, and historical syntax retention
+- #strong[Techstack]: PyTorch, Hugging Face Transformers, PEFT\/QLoRA, bitsandbytes (4-bit NF4), Weights & Biases
 
 
-== Publications
+#strong[#link("https://github.com/tmdeptrai/ContextFire-VLM")[ContextFire-VLM]]
 
-#regular-entry(
-  [
-    #strong[Towards Efficient Context-Aware Classification with Compact VLM Architectures: Indoor Fire Case Study]
+#emph[Accepted Research Codebase (Scientific Reports, Nature Portfolio 2026)]
+- Curated and open-sourced a multimodal dataset of 10k+ labeled frames to benchmark compact VLMs (Qwen2.5-VL-3B\/7B, InternVL2-2B\/4B) distinguishing hazardous fires from safe heat sources
+- Fine-tuned architectures using #strong[PEFT\/LoRA] with 4-bit AWQ quantization, boosting classification accuracy from #strong[60\% to 88.4\%]
+- Optimized inference with vLLM engine, achieving #strong[sub-120ms latency per frame] on NVIDIA Jetson \/ T4
+- #strong[Techstack]: PyTorch, Hugging Face, PEFT\/LoRA, vLLM, AWQ Quantization, OpenCV, Docker
 
-    Anh Tuan Giang, Nhat Quang Doan, #strong[Minh Duong Tran], et al.
 
-    #link("https://doi.org/https://doi.org/10.1038/s41598-026-48743-5")[https:\/\/doi.org\/10.1038\/s41598-026-48743-5] (Scientific Reports \[Q1 Journal\])
+#strong[#link("https://github.com/tmdeptrai/rag-on-aws")[Serverless Advanced Hybrid RAG on AWS]]
 
-  ],
-  [
-    Apr 2026
+#emph[Production MLOps, Neo4j + Pinecone, DeepEval]
+- Architected advanced hybrid retrieval pipeline combining hypothetical document query rewriting (HyDE), dense vector search (Pinecone), and multi-hop knowledge graph traversal (Neo4j)
+- Implemented #strong[Reciprocal Rank Fusion (RRF)] followed by a cross-encoder re-ranker (bge-reranker-large), lifting #strong[Recall\@5 from 71.3\% to 89.6\%] and NDCG\@10 to 0.86
+- Integrated automated CI\/CD evaluation test suite using DeepEval (LLM-as-a-Judge), tracking and enforcing #strong[\>92\% Faithfulness] and #strong[\>88\% Answer Relevancy] thresholds prior to deployment
+- Built parallelized chunking & embedding ingestion pipeline using AWS Lambda and S3, sustaining #strong[sub-250ms end-to-end retrieval latency] at #strong[\<\$1.20\/month] operational cost
+- #strong[Techstack]: Terraform, AWS (Lambda, S3, ECR), Neo4j Aura, Pinecone, Cross-Encoder Reranker, DeepEval, Docker
 
-  ],
-)
 
 == Certifications
 

@@ -81,7 +81,7 @@
   date: datetime(
     year: 2026,
     month: 9,
-    day: 15,
+    day: 16,
   ),
 )
 
@@ -113,7 +113,7 @@ Bridging empirical research with scalable production systems, with first-author\
 
     - #strong[Valedictorian] (Ranked 1st in cohort) | GPA: 17.05\/20 (≈ 3.89\/4)
 
-    - Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameters Efficient Fine-Tuned LLMs and Seq2Seq Models\"
+    - Thesis: \"Historical Fidelity in OCR Post-Correction: A Comparative Study of Parameter-Efficient Fine-Tuned LLMs and Seq2Seq Models\"
 
   ],
   [
@@ -265,7 +265,7 @@ Bridging empirical research with scalable production systems, with first-author\
 #strong[#link("https://github.com/tmdeptrai/hipe-ocrepair-llm")[HIPE-OCRepair]]
 
 #emph[Accepted Research Codebase (ICADL 2026, Springer LNCS)]
-- Benchmarked decoder-only (Qwen3-7B\/14B) and seq2seq (BART\/mBART) across 100k+ historical lines in French, German, and English on the multilingual HIPE-OCRepair benchmark
+- Benchmarked decoder-only (Qwen3-4B\/8B) and seq2seq (BART\/mBART) across 100k+ historical lines in French, German, and English on the multilingual HIPE-OCRepair benchmark
 - Formulated metadata-as-context conditioning (document date, type, domain), achieving up to #strong[50\% relative reduction in Character Error Rate (CER)] and #strong[Word Error Rate (WER)] over vanilla OCR baselines
 - Formulated a 5-class qualitative taxonomy to analyze hallucinations, entity drift, and historical syntax retention
 - #strong[Techstack]: PyTorch, Hugging Face Transformers, PEFT\/QLoRA, bitsandbytes (4-bit NF4), Weights & Biases
